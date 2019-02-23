@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>AdjacencyListGraph.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">cities_graph</a> &gt; <a href="index.source.html" class="el_package">sam_wen.cities_graph</a> &gt; <span class="el_source">AdjacencyListGraph.java</span></div><h1>AdjacencyListGraph.java</h1><pre class="source lang-java linenums">package sam_wen.cities_graph;
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>AdjacencyListGraph.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">cities-graph</a> &gt; <a href="index.source.html" class="el_package">sam_wen.cities_graph</a> &gt; <span class="el_source">AdjacencyListGraph.java</span></div><h1>AdjacencyListGraph.java</h1><pre class="source lang-java linenums">package sam_wen.cities_graph;
 
 import java.io.*;
 import java.util.HashMap;
@@ -28,219 +28,227 @@ public class AdjacencyListGraph {
 
     /**
      * Constructor from a file
+     *
+     * @param filepath   absolution or relative path
      */
-    public AdjacencyListGraph(String filename) {
-<span class="fc" id="L33">        this();</span>
-<span class="fc" id="L34">        readCitiesGraphFromFile(filename);</span>
-<span class="fc" id="L35">    }</span>
+    public AdjacencyListGraph(String filepath) {
+<span class="fc" id="L35">        this();</span>
+<span class="fc" id="L36">        readCitiesGraphFromFile(filepath);</span>
+<span class="fc" id="L37">    }</span>
 
     /**
      * Add connection (bi-direction) between two nodes
      *
-     * @param origin
-     * @param destination
-     * @throws Exception
+     * @param origin        starting node
+     * @param destination   ending node
+     * @throws IllegalArgumentException invalid argument
      */
     public void addConnection(String origin, String destination) throws IllegalArgumentException {
 
-<span class="fc bfc" id="L46" title="All 2 branches covered.">        if (origin == null) {</span>
-<span class="fc" id="L47">            throw new IllegalArgumentException(&quot;origin is null&quot;);</span>
+<span class="fc bfc" id="L48" title="All 2 branches covered.">        if (origin == null) {</span>
+<span class="fc" id="L49">            throw new IllegalArgumentException(&quot;origin is null&quot;);</span>
         }
 
-<span class="fc" id="L50">        origin = origin.trim();</span>
-<span class="fc bfc" id="L51" title="All 2 branches covered.">        if (origin.length() == 0) {</span>
-<span class="fc" id="L52">            throw new IllegalArgumentException(&quot;origin is empty&quot;);</span>
+<span class="fc" id="L52">        origin = origin.trim();</span>
+<span class="fc bfc" id="L53" title="All 2 branches covered.">        if (origin.length() == 0) {</span>
+<span class="fc" id="L54">            throw new IllegalArgumentException(&quot;origin is empty&quot;);</span>
         }
 
-<span class="fc bfc" id="L55" title="All 2 branches covered.">        if (destination == null) {</span>
-<span class="fc" id="L56">            throw new IllegalArgumentException(&quot;destination is null&quot;);</span>
+<span class="fc bfc" id="L57" title="All 2 branches covered.">        if (destination == null) {</span>
+<span class="fc" id="L58">            throw new IllegalArgumentException(&quot;destination is null&quot;);</span>
         }
 
-<span class="fc" id="L59">        destination = destination.trim();</span>
-<span class="fc bfc" id="L60" title="All 2 branches covered.">        if (destination.length() == 0) {</span>
-<span class="fc" id="L61">            throw new IllegalArgumentException(&quot;destination is empty&quot;);</span>
+<span class="fc" id="L61">        destination = destination.trim();</span>
+<span class="fc bfc" id="L62" title="All 2 branches covered.">        if (destination.length() == 0) {</span>
+<span class="fc" id="L63">            throw new IllegalArgumentException(&quot;destination is empty&quot;);</span>
         }
 
-<span class="fc bfc" id="L64" title="All 2 branches covered.">        if (destination.equals(origin)) {</span>
-<span class="fc" id="L65">            throw new IllegalArgumentException(&quot;destination is the same as origin&quot;);</span>
+<span class="fc bfc" id="L66" title="All 2 branches covered.">        if (destination.equals(origin)) {</span>
+<span class="fc" id="L67">            throw new IllegalArgumentException(&quot;destination is the same as origin&quot;);</span>
         }
 
-<span class="fc" id="L68">        addOriginToDestination(origin, destination);</span>
-<span class="fc" id="L69">        addOriginToDestination(destination, origin);</span>
+<span class="fc" id="L70">        addOriginToDestination(origin, destination);</span>
+<span class="fc" id="L71">        addOriginToDestination(destination, origin);</span>
 
-<span class="fc" id="L71">    }</span>
+<span class="fc" id="L73">    }</span>
 
     /**
      * Check if two nodes are connected
      *
-     * @param origin
-     * @param destination
-     * @return
+     * @param origin        starting node
+     * @param destination   ending node
+     * @return boolean      true if connected, false if not connected
      */
     public boolean isConnected(String origin, String destination) throws IllegalArgumentException {
 
-<span class="fc bfc" id="L82" title="All 2 branches covered.">        if (origin == null) {</span>
-<span class="fc" id="L83">            throw new IllegalArgumentException(&quot;origin is null&quot;);</span>
+<span class="fc bfc" id="L84" title="All 2 branches covered.">        if (origin == null) {</span>
+<span class="fc" id="L85">            throw new IllegalArgumentException(&quot;origin is null&quot;);</span>
         }
 
-<span class="fc" id="L86">        origin = origin.trim();</span>
-<span class="fc bfc" id="L87" title="All 2 branches covered.">        if (origin.length() == 0) {</span>
-<span class="fc" id="L88">            throw new IllegalArgumentException(&quot;origin is empty&quot;);</span>
+<span class="fc" id="L88">        origin = origin.trim();</span>
+<span class="fc bfc" id="L89" title="All 2 branches covered.">        if (origin.length() == 0) {</span>
+<span class="fc" id="L90">            throw new IllegalArgumentException(&quot;origin is empty&quot;);</span>
         }
 
-<span class="fc bfc" id="L91" title="All 2 branches covered.">        if (destination == null) {</span>
-<span class="fc" id="L92">            throw new IllegalArgumentException(&quot;destination is null&quot;);</span>
+<span class="fc bfc" id="L93" title="All 2 branches covered.">        if (destination == null) {</span>
+<span class="fc" id="L94">            throw new IllegalArgumentException(&quot;destination is null&quot;);</span>
         }
 
-<span class="fc" id="L95">        destination = destination.trim();</span>
-<span class="fc bfc" id="L96" title="All 2 branches covered.">        if (destination.length() == 0) {</span>
-<span class="fc" id="L97">            throw new IllegalArgumentException(&quot;destination is empty&quot;);</span>
+<span class="fc" id="L97">        destination = destination.trim();</span>
+<span class="fc bfc" id="L98" title="All 2 branches covered.">        if (destination.length() == 0) {</span>
+<span class="fc" id="L99">            throw new IllegalArgumentException(&quot;destination is empty&quot;);</span>
         }
 
-<span class="fc bfc" id="L100" title="All 2 branches covered.">        if (destination.equals(origin)) {</span>
-<span class="fc" id="L101">            return true;</span>
+<span class="fc bfc" id="L102" title="All 2 branches covered.">        if (destination.equals(origin)) {</span>
+<span class="fc" id="L103">            return true;</span>
         }
 
-<span class="fc bfc" id="L104" title="All 2 branches covered.">        if (!adjacencyListMap.containsKey(origin) ||</span>
-<span class="fc bfc" id="L105" title="All 2 branches covered.">                !adjacencyListMap.containsKey(destination)) {</span>
-<span class="fc" id="L106">            return false;</span>
+<span class="fc bfc" id="L106" title="All 2 branches covered.">        if (!adjacencyListMap.containsKey(origin) ||</span>
+<span class="fc bfc" id="L107" title="All 2 branches covered.">                !adjacencyListMap.containsKey(destination)) {</span>
+<span class="fc" id="L108">            return false;</span>
         }
 
         // set of nodes visited
-<span class="fc" id="L110">        HashSet&lt;String&gt; visited = new HashSet&lt;&gt;();</span>
+<span class="fc" id="L112">        HashSet&lt;String&gt; visited = new HashSet&lt;&gt;();</span>
 
         // BFS queue
-<span class="fc" id="L113">        LinkedList&lt;String&gt; queue = new LinkedList&lt;&gt;();</span>
+<span class="fc" id="L115">        LinkedList&lt;String&gt; queue = new LinkedList&lt;&gt;();</span>
 
         // BFS starts from origin node
-<span class="fc" id="L116">        visited.add(origin);</span>
-<span class="fc" id="L117">        queue.add(origin);</span>
+<span class="fc" id="L118">        visited.add(origin);</span>
+<span class="fc" id="L119">        queue.add(origin);</span>
 
         // BFS loop
-<span class="fc bfc" id="L120" title="All 2 branches covered.">        while (queue.size() != 0) {</span>
+<span class="fc bfc" id="L122" title="All 2 branches covered.">        while (queue.size() != 0) {</span>
 
             // pop out the first node from queue
-<span class="fc" id="L123">            String node = queue.pop();</span>
+<span class="fc" id="L125">            String node = queue.pop();</span>
 
             // get adjacency nodes list
-<span class="fc" id="L126">            LinkedList&lt;String&gt; adjacencyList = adjacencyListMap.get(node);</span>
+<span class="fc" id="L128">            LinkedList&lt;String&gt; adjacencyList = adjacencyListMap.get(node);</span>
 
             // loop through the list
             //
-<span class="fc" id="L130">            ListIterator&lt;String&gt; iterator = adjacencyList.listIterator();</span>
-<span class="fc bfc" id="L131" title="All 2 branches covered.">            while (iterator.hasNext()) {</span>
+<span class="fc" id="L132">            ListIterator&lt;String&gt; iterator = adjacencyList.listIterator();</span>
+<span class="fc bfc" id="L133" title="All 2 branches covered.">            while (iterator.hasNext()) {</span>
 
-<span class="fc" id="L133">                String nextNode = iterator.next();</span>
+<span class="fc" id="L135">                String nextNode = iterator.next();</span>
 
                 // check if reaches the destination
-<span class="fc bfc" id="L136" title="All 2 branches covered.">                if (nextNode.equals(destination)) {</span>
-<span class="fc" id="L137">                    return true;</span>
+<span class="fc bfc" id="L138" title="All 2 branches covered.">                if (nextNode.equals(destination)) {</span>
+<span class="fc" id="L139">                    return true;</span>
                 }
 
                 // not visited before, save it for late process
-<span class="fc bfc" id="L141" title="All 2 branches covered.">                if (!visited.contains(nextNode)) {</span>
-<span class="fc" id="L142">                    visited.add(nextNode);</span>
-<span class="fc" id="L143">                    queue.push(nextNode);</span>
+<span class="fc bfc" id="L143" title="All 2 branches covered.">                if (!visited.contains(nextNode)) {</span>
+<span class="fc" id="L144">                    visited.add(nextNode);</span>
+<span class="fc" id="L145">                    queue.add(nextNode);</span>
                 }
-<span class="fc" id="L145">            }</span>
-<span class="fc" id="L146">        }</span>
+<span class="fc" id="L147">            }</span>
+<span class="fc" id="L148">        }</span>
 
-<span class="fc" id="L148">        return false;</span>
+<span class="fc" id="L150">        return false;</span>
     }
 
     /**
-     * to add single direction link from origin to destination in the graph
+     * Add single direction link from origin to destination in the graph
      *
-     * @param origin
-     * @param destination
+     * @param origin        starting node
+     * @param destination   ending node
      */
     private void addOriginToDestination(String origin, String destination) {
 
-<span class="fc" id="L159">        LinkedList&lt;String&gt; adjacencyList = adjacencyListMap.get(origin);</span>
+<span class="fc" id="L161">        LinkedList&lt;String&gt; adjacencyList = adjacencyListMap.get(origin);</span>
 
         // created a linked list for the city if it is null
-<span class="fc bfc" id="L162" title="All 2 branches covered.">        if (adjacencyList == null) {</span>
+<span class="fc bfc" id="L164" title="All 2 branches covered.">        if (adjacencyList == null) {</span>
 
-<span class="fc" id="L164">            adjacencyList = new LinkedList&lt;String&gt;();</span>
-<span class="fc" id="L165">            adjacencyListMap.put(origin, adjacencyList);</span>
+<span class="fc" id="L166">            adjacencyList = new LinkedList&lt;String&gt;();</span>
+<span class="fc" id="L167">            adjacencyListMap.put(origin, adjacencyList);</span>
 
         } else {
 
             // do nothing if already existed
-<span class="fc bfc" id="L170" title="All 2 branches covered.">            if (adjacencyList.contains(destination)) {</span>
-<span class="fc" id="L171">                return;</span>
+<span class="fc bfc" id="L172" title="All 2 branches covered.">            if (adjacencyList.contains(destination)) {</span>
+<span class="fc" id="L173">                return;</span>
             }
         }
 
-<span class="fc" id="L175">        adjacencyList.add(destination);</span>
-<span class="fc" id="L176">    }</span>
+<span class="fc" id="L177">        adjacencyList.add(destination);</span>
+<span class="fc" id="L178">    }</span>
 
     /**
      * get size
-     * @return
+     * @return int - size of nodes
      */
     public int size() {
-<span class="fc" id="L183">        return adjacencyListMap.size();</span>
+<span class="fc" id="L185">        return adjacencyListMap.size();</span>
     }
 
     /**
-     * @param filepath
-     * @return
+     * @param filepath   absolution or relative path
+     * @return boolean   true if no error;
+     *                   false if there is any error, but it will read the rest 
      */
     public boolean readCitiesGraphFromFile(String filepath) {
 
+<span class="fc" id="L195">        boolean ok = true;</span>
+
         try {
 
-<span class="fc" id="L194">            File file = new File(filepath);</span>
-<span class="fc" id="L195">            InputStreamReader is = new InputStreamReader(new FileInputStream(file));</span>
-<span class="fc" id="L196">            BufferedReader reader = new BufferedReader(is);</span>
-<span class="fc" id="L197">            int n = 0;</span>
+<span class="fc" id="L199">            File file = new File(filepath);</span>
+<span class="fc" id="L200">            InputStreamReader is = new InputStreamReader(new FileInputStream(file));</span>
+<span class="fc" id="L201">            BufferedReader reader = new BufferedReader(is);</span>
+<span class="fc" id="L202">            int n = 0;</span>
 
             while (true) {
 
-<span class="fc" id="L201">                String line = reader.readLine();</span>
-<span class="fc bfc" id="L202" title="All 2 branches covered.">                if (line == null) break;</span>
-<span class="fc" id="L203">                n++;</span>
+<span class="fc" id="L206">                String line = reader.readLine();</span>
+<span class="fc bfc" id="L207" title="All 2 branches covered.">                if (line == null) break;</span>
+<span class="fc" id="L208">                n++;</span>
 
-<span class="fc" id="L205">                String pairs[] = line.split(&quot;,&quot;);</span>
-<span class="fc bfc" id="L206" title="All 2 branches covered.">                if (pairs.length != 2) {</span>
-<span class="fc" id="L207">                    LOGGER.error(&quot;line &quot; + n + &quot;: format invalid - &quot; + line);</span>
-<span class="fc" id="L208">                    continue;</span>
-                }
-
-<span class="fc" id="L211">                String node1 = pairs[0].trim();</span>
-<span class="fc bfc" id="L212" title="All 2 branches covered.">                if (node1.length() == 0) {</span>
-<span class="fc" id="L213">                    LOGGER.error(&quot;line &quot; + n + &quot;: format invalid, the first string is empty - &quot; + line);</span>
+<span class="fc" id="L210">                String pairs[] = line.split(&quot;,&quot;);</span>
+<span class="fc bfc" id="L211" title="All 2 branches covered.">                if (pairs.length != 2) {</span>
+<span class="fc" id="L212">                    ok = false;</span>
+<span class="fc" id="L213">                    LOGGER.error(&quot;line &quot; + n + &quot;: format invalid - &quot; + line);</span>
 <span class="fc" id="L214">                    continue;</span>
                 }
 
-<span class="fc" id="L217">                String node2 = pairs[1].trim();</span>
-<span class="fc bfc" id="L218" title="All 2 branches covered.">                if (node2.length() == 0) {</span>
-<span class="fc" id="L219">                    LOGGER.error(&quot;line &quot; + n + &quot;: format invalid, the second string is empty - &quot; + line);</span>
-<span class="fc" id="L220">                    continue;</span>
+<span class="fc" id="L217">                String node1 = pairs[0].trim();</span>
+<span class="fc bfc" id="L218" title="All 2 branches covered.">                if (node1.length() == 0) {</span>
+<span class="fc" id="L219">                    ok = false;</span>
+<span class="fc" id="L220">                    LOGGER.error(&quot;line &quot; + n + &quot;: format invalid, the first string is empty - &quot; + line);</span>
+<span class="fc" id="L221">                    continue;</span>
                 }
 
-<span class="fc" id="L223">                addConnection(node1, node2);</span>
-<span class="fc" id="L224">            }</span>
+<span class="fc" id="L224">                String node2 = pairs[1].trim();</span>
+<span class="fc bfc" id="L225" title="All 2 branches covered.">                if (node2.length() == 0) {</span>
+<span class="fc" id="L226">                    ok = false;</span>
+<span class="fc" id="L227">                    LOGGER.error(&quot;line &quot; + n + &quot;: format invalid, the second string is empty - &quot; + line);</span>
+<span class="fc" id="L228">                    continue;</span>
+                }
 
-<span class="fc" id="L226">            reader.close();</span>
-<span class="fc" id="L227">            is.close();</span>
+<span class="fc" id="L231">                addConnection(node1, node2);</span>
+<span class="fc" id="L232">            }</span>
 
-<span class="fc" id="L229">            LOGGER.trace(&quot;graph size = &quot; + size());</span>
+<span class="fc" id="L234">            reader.close();</span>
+<span class="fc" id="L235">            is.close();</span>
 
-<span class="fc bfc" id="L231" title="All 2 branches covered.">            if (size() == 0) {</span>
-<span class="fc" id="L232">                LOGGER.error(&quot;there is no city in the graph&quot;);</span>
-<span class="fc" id="L233">                return false;</span>
+<span class="fc" id="L237">            LOGGER.trace(&quot;graph size = &quot; + size());</span>
+
+<span class="fc bfc" id="L239" title="All 2 branches covered.">            if (size() == 0) {</span>
+<span class="fc" id="L240">                ok = false;</span>
+<span class="fc" id="L241">                LOGGER.error(&quot;there is no city in the graph&quot;);</span>
+<span class="fc" id="L242">                return false;</span>
             }
 
-<span class="fc" id="L236">            return true;</span>
-
-<span class="fc" id="L238">        } catch (IOException e) {</span>
-<span class="fc" id="L239">            LOGGER.error(e.getMessage() + &quot; filepath = &quot; + filepath);</span>
+<span class="fc" id="L245">        } catch (IOException e) {</span>
+<span class="fc" id="L246">            ok = false;</span>
+<span class="fc" id="L247">            LOGGER.error(e.getMessage() + &quot; filepath = &quot; + filepath);</span>
             //e.printStackTrace();
-        }
+<span class="fc" id="L249">        }</span>
 
-<span class="fc" id="L243">        return false;</span>
+<span class="fc" id="L251">        return ok;</span>
     }
 
 }

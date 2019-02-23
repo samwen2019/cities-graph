@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>CitiesController.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">cities_graph</a> &gt; <a href="index.source.html" class="el_package">sam_wen.cities_graph</a> &gt; <span class="el_source">CitiesController.java</span></div><h1>CitiesController.java</h1><pre class="source lang-java linenums">package sam_wen.cities_graph;
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>CitiesController.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">cities-graph</a> &gt; <a href="index.source.html" class="el_package">sam_wen.cities_graph</a> &gt; <span class="el_source">CitiesController.java</span></div><h1>CitiesController.java</h1><pre class="source lang-java linenums">package sam_wen.cities_graph;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -20,10 +20,12 @@ import org.slf4j.LoggerFactory;
     AdjacencyListGraph citiesGraph;
 
     /**
-     * @param response
-     * @param origin
-     * @param destination
-     * @return
+     * @param response      current HttpServletResponse object
+     * @param origin        origin city
+     * @param destination   destination
+     * @return 
+     *          &quot;yes&quot; for connected;
+     *          &quot;no&quot; for any other cases
      */
     @RequestMapping(value = &quot;/connected&quot;, method = RequestMethod.GET)
     public String isConnected(
@@ -32,19 +34,19 @@ import org.slf4j.LoggerFactory;
             @RequestParam(name = &quot;destination&quot;) String destination
     ) {
         try {
-<span class="fc bfc" id="L35" title="All 2 branches covered.">            if (citiesGraph.isConnected(origin, destination)) {</span>
-<span class="fc" id="L36">                return &quot;yes&quot;;</span>
+<span class="fc bfc" id="L37" title="All 2 branches covered.">            if (citiesGraph.isConnected(origin, destination)) {</span>
+<span class="fc" id="L38">                return &quot;yes&quot;;</span>
             } else {
-<span class="fc" id="L38">                return &quot;no&quot;;</span>
+<span class="fc" id="L40">                return &quot;no&quot;;</span>
             }
-<span class="fc" id="L40">        } catch (Exception e) {</span>
+<span class="fc" id="L42">        } catch (Exception e) {</span>
 
-<span class="fc" id="L42">            response.setStatus(400);</span>
-<span class="fc" id="L43">            LOGGER.error(e.getMessage());</span>
+<span class="fc" id="L44">            response.setStatus(400);</span>
+<span class="fc" id="L45">            LOGGER.error(e.getMessage());</span>
 
             //per requirement: &quot;Any unexpected input should result in a ’no’ response&quot;
             //
-<span class="fc" id="L47">            return &quot;no&quot;;</span>
+<span class="fc" id="L49">            return &quot;no&quot;;</span>
         }
     }
 }

@@ -28,18 +28,20 @@ public class AdjacencyListGraph {
 
     /**
      * Constructor from a file
+     *
+     * @param filepath   absolution or relative path
      */
-    public AdjacencyListGraph(String filename) {
+    public AdjacencyListGraph(String filepath) {
         this();
-        readCitiesGraphFromFile(filename);
+        readCitiesGraphFromFile(filepath);
     }
 
     /**
      * Add connection (bi-direction) between two nodes
      *
-     * @param origin
-     * @param destination
-     * @throws Exception
+     * @param origin        starting node
+     * @param destination   ending node
+     * @throws IllegalArgumentException invalid argument
      */
     public void addConnection(String origin, String destination) throws IllegalArgumentException {
 
@@ -73,9 +75,9 @@ public class AdjacencyListGraph {
     /**
      * Check if two nodes are connected
      *
-     * @param origin
-     * @param destination
-     * @return
+     * @param origin        starting node
+     * @param destination   ending node
+     * @return boolean      true if connected, false if not connected
      */
     public boolean isConnected(String origin, String destination) throws IllegalArgumentException {
 
@@ -140,7 +142,7 @@ public class AdjacencyListGraph {
                 // not visited before, save it for late process
                 if (!visited.contains(nextNode)) {
                     visited.add(nextNode);
-                    queue.push(nextNode);
+                    queue.add(nextNode);
                 }
             }
         }
@@ -149,10 +151,10 @@ public class AdjacencyListGraph {
     }
 
     /**
-     * to add single direction link from origin to destination in the graph
+     * Add single direction link from origin to destination in the graph
      *
-     * @param origin
-     * @param destination
+     * @param origin        starting node
+     * @param destination   ending node
      */
     private void addOriginToDestination(String origin, String destination) {
 
@@ -177,17 +179,20 @@ public class AdjacencyListGraph {
 
     /**
      * get size
-     * @return
+     * @return int - size of nodes
      */
     public int size() {
         return adjacencyListMap.size();
     }
 
     /**
-     * @param filepath
-     * @return
+     * @param filepath   absolution or relative path
+     * @return boolean   true if no error;
+     *                   false if there is any error, but it will read the rest 
      */
     public boolean readCitiesGraphFromFile(String filepath) {
+
+        boolean ok = true;
 
         try {
 
@@ -204,18 +209,21 @@ public class AdjacencyListGraph {
 
                 String pairs[] = line.split(",");
                 if (pairs.length != 2) {
+                    ok = false;
                     LOGGER.error("line " + n + ": format invalid - " + line);
                     continue;
                 }
 
                 String node1 = pairs[0].trim();
                 if (node1.length() == 0) {
+                    ok = false;
                     LOGGER.error("line " + n + ": format invalid, the first string is empty - " + line);
                     continue;
                 }
 
                 String node2 = pairs[1].trim();
                 if (node2.length() == 0) {
+                    ok = false;
                     LOGGER.error("line " + n + ": format invalid, the second string is empty - " + line);
                     continue;
                 }
@@ -229,18 +237,18 @@ public class AdjacencyListGraph {
             LOGGER.trace("graph size = " + size());
 
             if (size() == 0) {
+                ok = false;
                 LOGGER.error("there is no city in the graph");
                 return false;
             }
 
-            return true;
-
         } catch (IOException e) {
+            ok = false;
             LOGGER.error(e.getMessage() + " filepath = " + filepath);
             //e.printStackTrace();
         }
 
-        return false;
+        return ok;
     }
 
 }

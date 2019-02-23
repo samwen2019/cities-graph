@@ -20,10 +20,12 @@ public class CitiesController {
     AdjacencyListGraph citiesGraph;
 
     /**
-     * @param response
-     * @param origin
-     * @param destination
-     * @return
+     * @param response      current HttpServletResponse object
+     * @param origin        origin city
+     * @param destination   destination
+     * @return 
+     *          "yes" for connected;
+     *          "no" for any other cases
      */
     @RequestMapping(value = "/connected", method = RequestMethod.GET)
     public String isConnected(

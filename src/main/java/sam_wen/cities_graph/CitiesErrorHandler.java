@@ -24,8 +24,8 @@ public class CitiesErrorHandler implements ErrorController {
      *  1) not all exceptions are caused by unexpected input
      *  2) response code need to be more specific
      *
-     * @param response
-     * @return
+     * @param response  current HttpServletResponse object
+     * @return          "no"
      */
     @GetMapping(value = PATH)
     public String handleError(HttpServletResponse response) {

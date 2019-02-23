@@ -1,6 +1,6 @@
 GROUP,PACKAGE,CLASS,INSTRUCTION_MISSED,INSTRUCTION_COVERED,BRANCH_MISSED,BRANCH_COVERED,LINE_MISSED,LINE_COVERED,COMPLEXITY_MISSED,COMPLEXITY_COVERED,METHOD_MISSED,METHOD_COVERED
-cities_graph,sam_wen.cities_graph,CitiesApplication,0,8,0,0,0,3,0,2,0,2
-cities_graph,sam_wen.cities_graph,CitiesConfiguration,0,21,0,0,0,7,0,3,0,3
-cities_graph,sam_wen.cities_graph,CitiesErrorHandler,0,17,0,0,0,6,0,4,0,4
-cities_graph,sam_wen.cities_graph,CitiesController,0,27,0,2,0,9,0,4,0,3
-cities_graph,sam_wen.cities_graph,AdjacencyListGraph,0,362,0,46,0,95,0,31,0,8
+cities-graph,sam_wen.cities_graph,CitiesApplication,0,8,0,0,0,3,0,2,0,2
+cities-graph,sam_wen.cities_graph,CitiesConfiguration,0,21,0,0,0,7,0,3,0,3
+cities-graph,sam_wen.cities_graph,CitiesErrorHandler,0,17,0,0,0,6,0,4,0,4
+cities-graph,sam_wen.cities_graph,CitiesController,0,27,0,2,0,9,0,4,0,3
+cities-graph,sam_wen.cities_graph,AdjacencyListGraph,0,374,0,46,0,101,0,31,0,8
