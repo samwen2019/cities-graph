@@ -17,7 +17,7 @@ The program is tested with java version "1.8.0_131", you will need java 1.8 runt
  
 java -jar target/cities_graph-0.0.1-SNAPSHOT.jar
 
-It use ./city.txt as data file
+It use <a hre="city.txt>./city.txt</a> as data file
 
 The file contains a list of city pairs (one pair per line, comma separated), which indicates that there’s a road between those cities.
 
