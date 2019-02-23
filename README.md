@@ -32,14 +32,14 @@ The project uses maven 3.6, you will need java jdk 1.8+ and maven 3.6+ to build
 
 mvn test
 
-It will run unit test and generate a html version of unit test coverage reports in ./unit-test-coverage-report folder.
+It will run unit test and generate a html version of <a href="unit-test-coverage-report/index.html">unit test coverage reports</a> in ./unit-test-coverage-report folder.
 
-Check test/mvn-test.txt for a screen dump of run mvn test
-Check unit-test-coverage-report/index.html for code coverage of the test
+Check <a href="test/mvn-test.txt">test/mvn-test.txt</a> for a screen dump of run mvn test
+Check <a href="unit-test-coverage-report/index.html">unit-test-coverage-report/index.html</a> for code coverage of the test
 
 Full 100% code coverage is archieved.
 
-The file test/curl-test.txt is a dozen manual curl tests result.
+The file <a href="test/curl-test.txt">test/curl-test.txt</a> is a dozen manual curl tests result.
 
 How to how to build 
 ---------------------
@@ -59,7 +59,7 @@ goto url: http://localhost:8080/swagger-ui.html
 
 You can start to access Swagger Api Documentation interface.
 
-test/swagger-page-1.png and test/swagger-page-2.png two screen shots of the web page.
+<a href="test/swagger-page-1.png">test/swagger-page-1.png<>/a> and <a href="test/swagger-page-2.png">test/swagger-page-2.png</a> two screen shots of the web page.
 
 
 
