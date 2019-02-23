@@ -60,13 +60,18 @@ How to release
 
 mvn install
 
-This command will compile the code, run unit tests, and generate reports and multiple jars
+This command will compile the code, run unit tests, and generate reports, java docs and multiple files:
 
-- target/cities-graph-0.0.1-SNAPSHOT-sources.jar
-- target/cities-graph-0.0.1-SNAPSHOT.jar
-- target/cities-graph-0.0.1-SNAPSHOT-javadoc.jar
+- snapshot of current pom.xml
+- cities-graph-0.0.1-SNAPSHOT-sources.jar
+- cities-graph-0.0.1-SNAPSHOT.jar
+- cities-graph-0.0.1-SNAPSHOT-javadoc.jar
 
 maven repository will receive copies for the 3 jars.
+
+Check javadocs/index.html for java documents for the project.
+
+![javadocs.png](https://github.com/samwen2019/cities-graph/raw/master/javadocs/javadocs.png)
 
 Swagger API Doc / UI
 ----------------------

@@ -10,10 +10,13 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.web.client.HttpStatusCodeException;
 
+/**
+ * Handle errors
+ */
 @RestController
-<span class="fc" id="L14">public class CitiesErrorHandler implements ErrorController {</span>
+<span class="fc" id="L17">public class CitiesErrorHandler implements ErrorController {</span>
 
-<span class="fc" id="L16">    private static final Logger LOGGER = LoggerFactory.getLogger(CitiesErrorHandler.class);</span>
+<span class="fc" id="L19">    private static final Logger LOGGER = LoggerFactory.getLogger(CitiesErrorHandler.class);</span>
 
     private static final String PATH = &quot;/error&quot;;
 
@@ -29,14 +32,14 @@ import org.springframework.web.client.HttpStatusCodeException;
      */
     @GetMapping(value = PATH)
     public String handleError(HttpServletResponse response) {
-<span class="fc" id="L32">        response.setStatus(400);</span>
-<span class="fc" id="L33">        LOGGER.error(&quot;/error condition&quot;);</span>
-<span class="fc" id="L34">        return &quot;no&quot;;</span>
+<span class="fc" id="L35">        response.setStatus(400);</span>
+<span class="fc" id="L36">        LOGGER.error(&quot;/error condition&quot;);</span>
+<span class="fc" id="L37">        return &quot;no&quot;;</span>
     }
 
     @Override
     public String getErrorPath() {
-<span class="fc" id="L39">        return PATH;</span>
+<span class="fc" id="L42">        return PATH;</span>
     }
 
 }
