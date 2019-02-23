@@ -1,0 +1,78 @@
+$ curl -is -X GET 'http://localhost:8080/connected?origin=Boston&destination=Newark'
+HTTP/1.1 200 
+Content-Type: text/plain;charset=UTF-8
+Content-Length: 3
+Date: Sat, 23 Feb 2019 03:44:59 GMT
+
+yes
+
+$ curl -is -X GET 'http://localhost:8080/connected?origin=Boston&destination=Philadelphia'
+HTTP/1.1 200 
+Content-Type: text/plain;charset=UTF-8
+Content-Length: 3
+Date: Sat, 23 Feb 2019 03:45:48 GMT
+
+yes
+
+$ curl -is -X GET 'http://localhost:8080/connected?origin=Philadelphia&destination=Albany'
+HTTP/1.1 200 
+Content-Type: text/plain;charset=UTF-8
+Content-Length: 2
+Date: Sat, 23 Feb 2019 03:46:10 GMT
+
+no
+
+$ curl -is -X GET 'http://localhost:8080/connected?origin=Philadelphia&destination='
+HTTP/1.1 400 
+Content-Type: text/plain;charset=UTF-8
+Content-Length: 2
+Date: Sat, 23 Feb 2019 03:46:22 GMT
+Connection: close
+
+no
+
+$ curl -is -X GET 'http://localhost:8080/connected?origin=Philad'
+HTTP/1.1 400 
+Content-Type: text/plain;charset=UTF-8
+Content-Length: 2
+Date: Sat, 23 Feb 2019 03:46:41 GMT
+Connection: close
+
+no
+
+$ curl -is -X GET 'http://localhost:8080/connected'
+HTTP/1.1 400 
+Content-Type: text/plain;charset=UTF-8
+Content-Length: 2
+Date: Sat, 23 Feb 2019 03:46:50 GMT
+Connection: close
+
+no
+
+$ curl -is -X GET 'http://localhost:8080/connec'
+HTTP/1.1 400 
+Content-Type: text/plain;charset=UTF-8
+Content-Length: 2
+Date: Sat, 23 Feb 2019 03:46:54 GMT
+Connection: close
+
+no
+
+$ curl -is -X GET 'http://localhost:8080/c'
+HTTP/1.1 400 
+Content-Type: text/plain;charset=UTF-8
+Content-Length: 2
+Date: Sat, 23 Feb 2019 03:47:00 GMT
+Connection: close
+
+no
+
+$ curl -is -X GET 'http://localhost:8080'
+HTTP/1.1 400 
+Content-Type: text/plain;charset=UTF-8
+Content-Length: 2
+Date: Sat, 23 Feb 2019 03:47:08 GMT
+Connection: close
+
+no
+
