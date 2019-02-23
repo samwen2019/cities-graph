@@ -67,7 +67,7 @@ This command will compile the code, run unit tests, and generate reports, java d
 - cities-graph-0.0.1-SNAPSHOT.jar
 - cities-graph-0.0.1-SNAPSHOT-javadoc.jar
 
-maven repository will receive copies for the 3 jars.
+maven repository will receive copies for the 4 files.
 
 Check javadocs/index.html for java documents for the project.
 

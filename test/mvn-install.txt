@@ -37,31 +37,31 @@
  =========|_|==============|___/=/_/_/_/
  :: Spring Boot ::        (v2.1.3.RELEASE)
 
-2019-02-23 10:32:04.764  INFO 54828 --- [           main] sam_wen.cities_graph.CitiesApplication   : Starting CitiesApplication on yoda with PID 54828 (started by sam in /Users/sam/Workspace/cities-graph)
-2019-02-23 10:32:04.771 DEBUG 54828 --- [           main] sam_wen.cities_graph.CitiesApplication   : Running with Spring Boot v2.1.3.RELEASE, Spring v5.1.5.RELEASE
-2019-02-23 10:32:04.772  INFO 54828 --- [           main] sam_wen.cities_graph.CitiesApplication   : No active profile set, falling back to default profiles: default
-2019-02-23 10:32:07.305  INFO 54828 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2019-02-23 10:32:07.357  INFO 54828 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2019-02-23 10:32:07.358  INFO 54828 --- [           main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.16]
-2019-02-23 10:32:07.378  INFO 54828 --- [           main] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/sam/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
-2019-02-23 10:32:07.537  INFO 54828 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2019-02-23 10:32:07.537  INFO 54828 --- [           main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2679 ms
-2019-02-23 10:32:07.656 TRACE 54828 --- [           main] sam_wen.cities_graph.AdjacencyListGraph  : graph size = 6
-2019-02-23 10:32:08.261  INFO 54828 --- [           main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
-2019-02-23 10:32:08.466  INFO 54828 --- [           main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2019-02-23 10:32:08.740  INFO 54828 --- [           main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
-2019-02-23 10:32:08.813  INFO 54828 --- [           main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
-2019-02-23 10:32:08.856  INFO 54828 --- [           main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
-2019-02-23 10:32:09.126  INFO 54828 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2019-02-23 10:32:09.135  INFO 54828 --- [           main] sam_wen.cities_graph.CitiesApplication   : Started CitiesApplication in 5.108 seconds (JVM running for 6.191)
-[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 5.482 s - in sam_wen.cities_graph.CitiesApplicationTest
+2019-02-23 11:04:24.008  INFO 55312 --- [           main] sam_wen.cities_graph.CitiesApplication   : Starting CitiesApplication on yoda with PID 55312 (started by sam in /Users/sam/Workspace/cities-graph)
+2019-02-23 11:04:24.015 DEBUG 55312 --- [           main] sam_wen.cities_graph.CitiesApplication   : Running with Spring Boot v2.1.3.RELEASE, Spring v5.1.5.RELEASE
+2019-02-23 11:04:24.016  INFO 55312 --- [           main] sam_wen.cities_graph.CitiesApplication   : No active profile set, falling back to default profiles: default
+2019-02-23 11:04:26.567  INFO 55312 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-02-23 11:04:26.616  INFO 55312 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-02-23 11:04:26.617  INFO 55312 --- [           main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.16]
+2019-02-23 11:04:26.640  INFO 55312 --- [           main] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/sam/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+2019-02-23 11:04:26.799  INFO 55312 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-02-23 11:04:26.800  INFO 55312 --- [           main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2688 ms
+2019-02-23 11:04:26.921 TRACE 55312 --- [           main] sam_wen.cities_graph.AdjacencyListGraph  : graph size = 6
+2019-02-23 11:04:27.525  INFO 55312 --- [           main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2019-02-23 11:04:27.736  INFO 55312 --- [           main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-02-23 11:04:28.037  INFO 55312 --- [           main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2019-02-23 11:04:28.101  INFO 55312 --- [           main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2019-02-23 11:04:28.140  INFO 55312 --- [           main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2019-02-23 11:04:28.382  INFO 55312 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2019-02-23 11:04:28.388  INFO 55312 --- [           main] sam_wen.cities_graph.CitiesApplication   : Started CitiesApplication in 5.16 seconds (JVM running for 6.367)
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 5.628 s - in sam_wen.cities_graph.CitiesApplicationTest
 [INFO] Running sam_wen.cities_graph.HttpRequestTest
-2019-02-23 10:32:09.221  INFO 54828 --- [           main] .b.t.c.SpringBootTestContextBootstrapper : Neither @ContextConfiguration nor @ContextHierarchy found for test class [sam_wen.cities_graph.HttpRequestTest], using SpringBootContextLoader
-2019-02-23 10:32:09.222  INFO 54828 --- [           main] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [sam_wen.cities_graph.HttpRequestTest]: no resource found for suffixes {-context.xml, Context.groovy}.
-2019-02-23 10:32:09.223  INFO 54828 --- [           main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [sam_wen.cities_graph.HttpRequestTest]: HttpRequestTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-2019-02-23 10:32:09.268  INFO 54828 --- [           main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration sam_wen.cities_graph.CitiesApplication for test class sam_wen.cities_graph.HttpRequestTest
-2019-02-23 10:32:09.277  INFO 54828 --- [           main] .b.t.c.SpringBootTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
-2019-02-23 10:32:09.295  INFO 54828 --- [           main] .b.t.c.SpringBootTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@782a0e57, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@61c9e646, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@4dccaef5, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@75ed8f59, org.springframework.test.context.support.DirtiesContextTestExecutionListener@5d9d7f05, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@73484926, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@5b5beabc, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@425531c9, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@74061bd1, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@45b67d0e]
+2019-02-23 11:04:28.471  INFO 55312 --- [           main] .b.t.c.SpringBootTestContextBootstrapper : Neither @ContextConfiguration nor @ContextHierarchy found for test class [sam_wen.cities_graph.HttpRequestTest], using SpringBootContextLoader
+2019-02-23 11:04:28.472  INFO 55312 --- [           main] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [sam_wen.cities_graph.HttpRequestTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2019-02-23 11:04:28.474  INFO 55312 --- [           main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [sam_wen.cities_graph.HttpRequestTest]: HttpRequestTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2019-02-23 11:04:28.519  INFO 55312 --- [           main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration sam_wen.cities_graph.CitiesApplication for test class sam_wen.cities_graph.HttpRequestTest
+2019-02-23 11:04:28.528  INFO 55312 --- [           main] .b.t.c.SpringBootTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2019-02-23 11:04:28.545  INFO 55312 --- [           main] .b.t.c.SpringBootTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@7b797cbc, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@d6fc3bf, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@21e0a1e9, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@5d576790, org.springframework.test.context.support.DirtiesContextTestExecutionListener@6dfb7c1a, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@1efa2821, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@3a313dfe, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@5c3ca6cf, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@6a110afe, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@25e58cbd]
 
   .   ____          _            __ _ _
  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
@@ -71,56 +71,56 @@
  =========|_|==============|___/=/_/_/_/
  :: Spring Boot ::        (v2.1.3.RELEASE)
 
-2019-02-23 10:32:09.346  INFO 54828 --- [           main] sam_wen.cities_graph.HttpRequestTest     : Starting HttpRequestTest on yoda with PID 54828 (started by sam in /Users/sam/Workspace/cities-graph)
-2019-02-23 10:32:09.346 DEBUG 54828 --- [           main] sam_wen.cities_graph.HttpRequestTest     : Running with Spring Boot v2.1.3.RELEASE, Spring v5.1.5.RELEASE
-2019-02-23 10:32:09.347  INFO 54828 --- [           main] sam_wen.cities_graph.HttpRequestTest     : No active profile set, falling back to default profiles: default
-2019-02-23 10:32:09.804  INFO 54828 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 0 (http)
-2019-02-23 10:32:09.806  INFO 54828 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2019-02-23 10:32:09.806  INFO 54828 --- [           main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.16]
-2019-02-23 10:32:09.813  INFO 54828 --- [           main] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
-2019-02-23 10:32:09.813  INFO 54828 --- [           main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 463 ms
-2019-02-23 10:32:09.891 TRACE 54828 --- [           main] sam_wen.cities_graph.AdjacencyListGraph  : graph size = 6
-2019-02-23 10:32:10.227  INFO 54828 --- [           main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
-2019-02-23 10:32:10.379  INFO 54828 --- [           main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2019-02-23 10:32:10.522  INFO 54828 --- [           main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
-2019-02-23 10:32:10.523  INFO 54828 --- [           main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
-2019-02-23 10:32:10.527  INFO 54828 --- [           main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
-2019-02-23 10:32:10.548  INFO 54828 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 50292 (http) with context path ''
-2019-02-23 10:32:10.549  INFO 54828 --- [           main] sam_wen.cities_graph.HttpRequestTest     : Started HttpRequestTest in 1.237 seconds (JVM running for 7.606)
-2019-02-23 10:32:11.001  INFO 54828 --- [o-auto-1-exec-1] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2019-02-23 10:32:11.002  INFO 54828 --- [o-auto-1-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2019-02-23 10:32:11.033  INFO 54828 --- [o-auto-1-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 31 ms
-2019-02-23 10:32:11.109 ERROR 54828 --- [o-auto-1-exec-1] sam_wen.cities_graph.CitiesErrorHandler  : /error condition
-2019-02-23 10:32:11.322  WARN 54828 --- [o-auto-1-exec-2] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.bind.MissingServletRequestParameterException: Required String parameter 'origin' is not present]
-2019-02-23 10:32:11.323 ERROR 54828 --- [o-auto-1-exec-2] sam_wen.cities_graph.CitiesErrorHandler  : /error condition
-2019-02-23 10:32:11.412  WARN 54828 --- [o-auto-1-exec-6] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.bind.MissingServletRequestParameterException: Required String parameter 'destination' is not present]
-2019-02-23 10:32:11.414 ERROR 54828 --- [o-auto-1-exec-6] sam_wen.cities_graph.CitiesErrorHandler  : /error condition
-2019-02-23 10:32:11.422  WARN 54828 --- [o-auto-1-exec-7] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.bind.MissingServletRequestParameterException: Required String parameter 'origin' is not present]
-2019-02-23 10:32:11.423 ERROR 54828 --- [o-auto-1-exec-7] sam_wen.cities_graph.CitiesErrorHandler  : /error condition
-2019-02-23 10:32:11.432 ERROR 54828 --- [o-auto-1-exec-8] sam_wen.cities_graph.CitiesController    : destination is empty
-2019-02-23 10:32:11.441 ERROR 54828 --- [o-auto-1-exec-9] sam_wen.cities_graph.CitiesController    : origin is empty
-[INFO] Tests run: 9, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.265 s - in sam_wen.cities_graph.HttpRequestTest
+2019-02-23 11:04:28.600  INFO 55312 --- [           main] sam_wen.cities_graph.HttpRequestTest     : Starting HttpRequestTest on yoda with PID 55312 (started by sam in /Users/sam/Workspace/cities-graph)
+2019-02-23 11:04:28.600 DEBUG 55312 --- [           main] sam_wen.cities_graph.HttpRequestTest     : Running with Spring Boot v2.1.3.RELEASE, Spring v5.1.5.RELEASE
+2019-02-23 11:04:28.601  INFO 55312 --- [           main] sam_wen.cities_graph.HttpRequestTest     : No active profile set, falling back to default profiles: default
+2019-02-23 11:04:29.050  INFO 55312 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 0 (http)
+2019-02-23 11:04:29.052  INFO 55312 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-02-23 11:04:29.052  INFO 55312 --- [           main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.16]
+2019-02-23 11:04:29.058  INFO 55312 --- [           main] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2019-02-23 11:04:29.059  INFO 55312 --- [           main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 455 ms
+2019-02-23 11:04:29.135 TRACE 55312 --- [           main] sam_wen.cities_graph.AdjacencyListGraph  : graph size = 6
+2019-02-23 11:04:29.449  INFO 55312 --- [           main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2019-02-23 11:04:29.607  INFO 55312 --- [           main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-02-23 11:04:29.751  INFO 55312 --- [           main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2019-02-23 11:04:29.752  INFO 55312 --- [           main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2019-02-23 11:04:29.758  INFO 55312 --- [           main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2019-02-23 11:04:29.781  INFO 55312 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 50430 (http) with context path ''
+2019-02-23 11:04:29.783  INFO 55312 --- [           main] sam_wen.cities_graph.HttpRequestTest     : Started HttpRequestTest in 1.222 seconds (JVM running for 7.761)
+2019-02-23 11:04:30.200  INFO 55312 --- [o-auto-1-exec-1] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-02-23 11:04:30.200  INFO 55312 --- [o-auto-1-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-02-23 11:04:30.223  INFO 55312 --- [o-auto-1-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 23 ms
+2019-02-23 11:04:30.280 ERROR 55312 --- [o-auto-1-exec-1] sam_wen.cities_graph.CitiesErrorHandler  : /error condition
+2019-02-23 11:04:30.466  WARN 55312 --- [o-auto-1-exec-2] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.bind.MissingServletRequestParameterException: Required String parameter 'origin' is not present]
+2019-02-23 11:04:30.468 ERROR 55312 --- [o-auto-1-exec-2] sam_wen.cities_graph.CitiesErrorHandler  : /error condition
+2019-02-23 11:04:30.518  WARN 55312 --- [o-auto-1-exec-6] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.bind.MissingServletRequestParameterException: Required String parameter 'destination' is not present]
+2019-02-23 11:04:30.519 ERROR 55312 --- [o-auto-1-exec-6] sam_wen.cities_graph.CitiesErrorHandler  : /error condition
+2019-02-23 11:04:30.528  WARN 55312 --- [o-auto-1-exec-7] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.bind.MissingServletRequestParameterException: Required String parameter 'origin' is not present]
+2019-02-23 11:04:30.529 ERROR 55312 --- [o-auto-1-exec-7] sam_wen.cities_graph.CitiesErrorHandler  : /error condition
+2019-02-23 11:04:30.537 ERROR 55312 --- [o-auto-1-exec-8] sam_wen.cities_graph.CitiesController    : destination is empty
+2019-02-23 11:04:30.546 ERROR 55312 --- [o-auto-1-exec-9] sam_wen.cities_graph.CitiesController    : origin is empty
+[INFO] Tests run: 9, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.116 s - in sam_wen.cities_graph.HttpRequestTest
 [INFO] Running sam_wen.cities_graph.AdjacencyListGraphTest
-2019-02-23 10:32:11.449 ERROR 54828 --- [           main] sam_wen.cities_graph.AdjacencyListGraph  : line 6: format invalid - 
-2019-02-23 10:32:11.449 ERROR 54828 --- [           main] sam_wen.cities_graph.AdjacencyListGraph  : line 7: format invalid - e
-2019-02-23 10:32:11.449 ERROR 54828 --- [           main] sam_wen.cities_graph.AdjacencyListGraph  : line 8: format invalid, the first string is empty - , f
-2019-02-23 10:32:11.449 ERROR 54828 --- [           main] sam_wen.cities_graph.AdjacencyListGraph  : line 9: format invalid - f,
-2019-02-23 10:32:11.449 ERROR 54828 --- [           main] sam_wen.cities_graph.AdjacencyListGraph  : line 10: format invalid, the second string is empty - f,   
-2019-02-23 10:32:11.450 ERROR 54828 --- [           main] sam_wen.cities_graph.AdjacencyListGraph  : line 11: format invalid - 
-2019-02-23 10:32:11.450 ERROR 54828 --- [           main] sam_wen.cities_graph.AdjacencyListGraph  : line 12: format invalid - 
-2019-02-23 10:32:11.450 TRACE 54828 --- [           main] sam_wen.cities_graph.AdjacencyListGraph  : graph size = 6
-2019-02-23 10:32:11.450 ERROR 54828 --- [           main] sam_wen.cities_graph.AdjacencyListGraph  : ./test/not-existed.txt (No such file or directory) filepath = ./test/not-existed.txt
-2019-02-23 10:32:11.451 ERROR 54828 --- [           main] sam_wen.cities_graph.AdjacencyListGraph  : ./test/not-existed2.txt (No such file or directory) filepath = ./test/not-existed2.txt
-2019-02-23 10:32:11.451 TRACE 54828 --- [           main] sam_wen.cities_graph.AdjacencyListGraph  : graph size = 0
-2019-02-23 10:32:11.451 ERROR 54828 --- [           main] sam_wen.cities_graph.AdjacencyListGraph  : there is no city in the graph
-[INFO] Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.019 s - in sam_wen.cities_graph.AdjacencyListGraphTest
+2019-02-23 11:04:30.555 ERROR 55312 --- [           main] sam_wen.cities_graph.AdjacencyListGraph  : line 6: format invalid - 
+2019-02-23 11:04:30.556 ERROR 55312 --- [           main] sam_wen.cities_graph.AdjacencyListGraph  : line 7: format invalid - e
+2019-02-23 11:04:30.556 ERROR 55312 --- [           main] sam_wen.cities_graph.AdjacencyListGraph  : line 8: format invalid, the first string is empty - , f
+2019-02-23 11:04:30.556 ERROR 55312 --- [           main] sam_wen.cities_graph.AdjacencyListGraph  : line 9: format invalid - f,
+2019-02-23 11:04:30.556 ERROR 55312 --- [           main] sam_wen.cities_graph.AdjacencyListGraph  : line 10: format invalid, the second string is empty - f,   
+2019-02-23 11:04:30.556 ERROR 55312 --- [           main] sam_wen.cities_graph.AdjacencyListGraph  : line 11: format invalid - 
+2019-02-23 11:04:30.556 ERROR 55312 --- [           main] sam_wen.cities_graph.AdjacencyListGraph  : line 12: format invalid - 
+2019-02-23 11:04:30.556 TRACE 55312 --- [           main] sam_wen.cities_graph.AdjacencyListGraph  : graph size = 6
+2019-02-23 11:04:30.557 ERROR 55312 --- [           main] sam_wen.cities_graph.AdjacencyListGraph  : ./test/not-existed.txt (No such file or directory) filepath = ./test/not-existed.txt
+2019-02-23 11:04:30.557 ERROR 55312 --- [           main] sam_wen.cities_graph.AdjacencyListGraph  : ./test/not-existed2.txt (No such file or directory) filepath = ./test/not-existed2.txt
+2019-02-23 11:04:30.558 TRACE 55312 --- [           main] sam_wen.cities_graph.AdjacencyListGraph  : graph size = 0
+2019-02-23 11:04:30.558 ERROR 55312 --- [           main] sam_wen.cities_graph.AdjacencyListGraph  : there is no city in the graph
+[INFO] Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.018 s - in sam_wen.cities_graph.AdjacencyListGraphTest
 [INFO] Running sam_wen.cities_graph.CitiesErrorHandlerTest
-2019-02-23 10:32:11.453  INFO 54828 --- [           main] .b.t.c.SpringBootTestContextBootstrapper : Neither @ContextConfiguration nor @ContextHierarchy found for test class [sam_wen.cities_graph.CitiesErrorHandlerTest], using SpringBootContextLoader
-2019-02-23 10:32:11.454  INFO 54828 --- [           main] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [sam_wen.cities_graph.CitiesErrorHandlerTest]: no resource found for suffixes {-context.xml, Context.groovy}.
-2019-02-23 10:32:11.455  INFO 54828 --- [           main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [sam_wen.cities_graph.CitiesErrorHandlerTest]: CitiesErrorHandlerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-2019-02-23 10:32:11.457  INFO 54828 --- [           main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration sam_wen.cities_graph.CitiesApplication for test class sam_wen.cities_graph.CitiesErrorHandlerTest
-2019-02-23 10:32:11.459  INFO 54828 --- [           main] .b.t.c.SpringBootTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
-2019-02-23 10:32:11.461  INFO 54828 --- [           main] .b.t.c.SpringBootTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@1877da1d, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@6ae85b76, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@1701be39, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@15aa0bed, org.springframework.test.context.support.DirtiesContextTestExecutionListener@332b8c77, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@1b30428f, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@1dad7a6, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@44ea5113, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@2b4d25cd, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@32702e11]
+2019-02-23 11:04:30.560  INFO 55312 --- [           main] .b.t.c.SpringBootTestContextBootstrapper : Neither @ContextConfiguration nor @ContextHierarchy found for test class [sam_wen.cities_graph.CitiesErrorHandlerTest], using SpringBootContextLoader
+2019-02-23 11:04:30.561  INFO 55312 --- [           main] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [sam_wen.cities_graph.CitiesErrorHandlerTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2019-02-23 11:04:30.561  INFO 55312 --- [           main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [sam_wen.cities_graph.CitiesErrorHandlerTest]: CitiesErrorHandlerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2019-02-23 11:04:30.563  INFO 55312 --- [           main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration sam_wen.cities_graph.CitiesApplication for test class sam_wen.cities_graph.CitiesErrorHandlerTest
+2019-02-23 11:04:30.565  INFO 55312 --- [           main] .b.t.c.SpringBootTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2019-02-23 11:04:30.566  INFO 55312 --- [           main] .b.t.c.SpringBootTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@2a9f6a64, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@626cd10c, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@1ba5b2a8, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@5ba699c9, org.springframework.test.context.support.DirtiesContextTestExecutionListener@abb1493, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@edb5079, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@385d93f8, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@575a3deb, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@517b41f, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@519b645c]
 
   .   ____          _            __ _ _
  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
@@ -130,40 +130,40 @@
  =========|_|==============|___/=/_/_/_/
  :: Spring Boot ::        (v2.1.3.RELEASE)
 
-2019-02-23 10:32:11.503  INFO 54828 --- [           main] s.cities_graph.CitiesErrorHandlerTest    : Starting CitiesErrorHandlerTest on yoda with PID 54828 (started by sam in /Users/sam/Workspace/cities-graph)
-2019-02-23 10:32:11.503 DEBUG 54828 --- [           main] s.cities_graph.CitiesErrorHandlerTest    : Running with Spring Boot v2.1.3.RELEASE, Spring v5.1.5.RELEASE
-2019-02-23 10:32:11.503  INFO 54828 --- [           main] s.cities_graph.CitiesErrorHandlerTest    : No active profile set, falling back to default profiles: default
-2019-02-23 10:32:11.830 TRACE 54828 --- [           main] sam_wen.cities_graph.AdjacencyListGraph  : graph size = 6
-2019-02-23 10:32:12.139  INFO 54828 --- [           main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
-2019-02-23 10:32:12.359  INFO 54828 --- [           main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2019-02-23 10:32:12.499  INFO 54828 --- [           main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
-2019-02-23 10:32:12.500  INFO 54828 --- [           main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
-2019-02-23 10:32:12.505  INFO 54828 --- [           main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
-2019-02-23 10:32:12.523  INFO 54828 --- [           main] s.cities_graph.CitiesErrorHandlerTest    : Started CitiesErrorHandlerTest in 1.048 seconds (JVM running for 9.579)
-2019-02-23 10:32:13.051 ERROR 54828 --- [           main] sam_wen.cities_graph.CitiesErrorHandler  : /error condition
-[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.577 s - in sam_wen.cities_graph.CitiesErrorHandlerTest
+2019-02-23 11:04:30.603  INFO 55312 --- [           main] s.cities_graph.CitiesErrorHandlerTest    : Starting CitiesErrorHandlerTest on yoda with PID 55312 (started by sam in /Users/sam/Workspace/cities-graph)
+2019-02-23 11:04:30.603 DEBUG 55312 --- [           main] s.cities_graph.CitiesErrorHandlerTest    : Running with Spring Boot v2.1.3.RELEASE, Spring v5.1.5.RELEASE
+2019-02-23 11:04:30.604  INFO 55312 --- [           main] s.cities_graph.CitiesErrorHandlerTest    : No active profile set, falling back to default profiles: default
+2019-02-23 11:04:30.905 TRACE 55312 --- [           main] sam_wen.cities_graph.AdjacencyListGraph  : graph size = 6
+2019-02-23 11:04:31.203  INFO 55312 --- [           main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2019-02-23 11:04:31.414  INFO 55312 --- [           main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-02-23 11:04:31.541  INFO 55312 --- [           main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2019-02-23 11:04:31.542  INFO 55312 --- [           main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2019-02-23 11:04:31.547  INFO 55312 --- [           main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2019-02-23 11:04:31.565  INFO 55312 --- [           main] s.cities_graph.CitiesErrorHandlerTest    : Started CitiesErrorHandlerTest in 0.99 seconds (JVM running for 9.543)
+2019-02-23 11:04:32.076 ERROR 55312 --- [           main] sam_wen.cities_graph.CitiesErrorHandler  : /error condition
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.498 s - in sam_wen.cities_graph.CitiesErrorHandlerTest
 [INFO] Running sam_wen.cities_graph.CitiesControllerTest
-2019-02-23 10:32:13.055  INFO 54828 --- [           main] .b.t.c.SpringBootTestContextBootstrapper : Neither @ContextConfiguration nor @ContextHierarchy found for test class [sam_wen.cities_graph.CitiesControllerTest], using SpringBootContextLoader
-2019-02-23 10:32:13.055  INFO 54828 --- [           main] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [sam_wen.cities_graph.CitiesControllerTest]: no resource found for suffixes {-context.xml, Context.groovy}.
-2019-02-23 10:32:13.056  INFO 54828 --- [           main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [sam_wen.cities_graph.CitiesControllerTest]: CitiesControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-2019-02-23 10:32:13.058  INFO 54828 --- [           main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration sam_wen.cities_graph.CitiesApplication for test class sam_wen.cities_graph.CitiesControllerTest
-2019-02-23 10:32:13.060  INFO 54828 --- [           main] .b.t.c.SpringBootTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
-2019-02-23 10:32:13.061  INFO 54828 --- [           main] .b.t.c.SpringBootTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@509fbdad, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@67526dc1, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@3a3c98f1, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@26105844, org.springframework.test.context.support.DirtiesContextTestExecutionListener@bcfebfe, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@7f87b323, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@21225732, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@5d4f92a, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@71307275, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@336cc9db]
-2019-02-23 10:32:13.069 ERROR 54828 --- [           main] sam_wen.cities_graph.CitiesController    : origin is empty
-2019-02-23 10:32:13.073 ERROR 54828 --- [           main] sam_wen.cities_graph.CitiesController    : origin is empty
-2019-02-23 10:32:13.077 ERROR 54828 --- [           main] sam_wen.cities_graph.CitiesController    : origin is null
-[INFO] Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.034 s - in sam_wen.cities_graph.CitiesControllerTest
+2019-02-23 11:04:32.079  INFO 55312 --- [           main] .b.t.c.SpringBootTestContextBootstrapper : Neither @ContextConfiguration nor @ContextHierarchy found for test class [sam_wen.cities_graph.CitiesControllerTest], using SpringBootContextLoader
+2019-02-23 11:04:32.079  INFO 55312 --- [           main] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [sam_wen.cities_graph.CitiesControllerTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2019-02-23 11:04:32.080  INFO 55312 --- [           main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [sam_wen.cities_graph.CitiesControllerTest]: CitiesControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2019-02-23 11:04:32.081  INFO 55312 --- [           main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration sam_wen.cities_graph.CitiesApplication for test class sam_wen.cities_graph.CitiesControllerTest
+2019-02-23 11:04:32.083  INFO 55312 --- [           main] .b.t.c.SpringBootTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2019-02-23 11:04:32.084  INFO 55312 --- [           main] .b.t.c.SpringBootTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@34f70735, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@2f1ca332, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@3763f0bf, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@3eae10be, org.springframework.test.context.support.DirtiesContextTestExecutionListener@326c66f1, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@78a346bd, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@506da71e, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@1e88664d, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@4f02c083, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@2df6f170]
+2019-02-23 11:04:32.093 ERROR 55312 --- [           main] sam_wen.cities_graph.CitiesController    : origin is empty
+2019-02-23 11:04:32.097 ERROR 55312 --- [           main] sam_wen.cities_graph.CitiesController    : origin is empty
+2019-02-23 11:04:32.100 ERROR 55312 --- [           main] sam_wen.cities_graph.CitiesController    : origin is null
+[INFO] Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.042 s - in sam_wen.cities_graph.CitiesControllerTest
 [INFO] Running sam_wen.cities_graph.CitiesConfigurationTest
-2019-02-23 10:32:13.087  INFO 54828 --- [           main] .b.t.c.SpringBootTestContextBootstrapper : Neither @ContextConfiguration nor @ContextHierarchy found for test class [sam_wen.cities_graph.CitiesConfigurationTest], using SpringBootContextLoader
-2019-02-23 10:32:13.088  INFO 54828 --- [           main] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [sam_wen.cities_graph.CitiesConfigurationTest]: no resource found for suffixes {-context.xml, Context.groovy}.
-2019-02-23 10:32:13.088  INFO 54828 --- [           main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [sam_wen.cities_graph.CitiesConfigurationTest]: CitiesConfigurationTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-2019-02-23 10:32:13.089  INFO 54828 --- [           main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration sam_wen.cities_graph.CitiesApplication for test class sam_wen.cities_graph.CitiesConfigurationTest
-2019-02-23 10:32:13.090  INFO 54828 --- [           main] .b.t.c.SpringBootTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
-2019-02-23 10:32:13.091  INFO 54828 --- [           main] .b.t.c.SpringBootTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@55d73f7, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@2127a694, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@5a19008f, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@5860fa7e, org.springframework.test.context.support.DirtiesContextTestExecutionListener@364cf84e, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@2a43fb15, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@38cc8baa, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@672035c7, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@367f3fe5, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@351e16c]
-[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.028 s - in sam_wen.cities_graph.CitiesConfigurationTest
-2019-02-23 10:32:13.134  INFO 54828 --- [       Thread-7] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
-2019-02-23 10:32:13.135  INFO 54828 --- [       Thread-9] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
-2019-02-23 10:32:13.136  INFO 54828 --- [       Thread-4] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-02-23 11:04:32.113  INFO 55312 --- [           main] .b.t.c.SpringBootTestContextBootstrapper : Neither @ContextConfiguration nor @ContextHierarchy found for test class [sam_wen.cities_graph.CitiesConfigurationTest], using SpringBootContextLoader
+2019-02-23 11:04:32.113  INFO 55312 --- [           main] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [sam_wen.cities_graph.CitiesConfigurationTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2019-02-23 11:04:32.113  INFO 55312 --- [           main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [sam_wen.cities_graph.CitiesConfigurationTest]: CitiesConfigurationTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2019-02-23 11:04:32.115  INFO 55312 --- [           main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration sam_wen.cities_graph.CitiesApplication for test class sam_wen.cities_graph.CitiesConfigurationTest
+2019-02-23 11:04:32.117  INFO 55312 --- [           main] .b.t.c.SpringBootTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2019-02-23 11:04:32.118  INFO 55312 --- [           main] .b.t.c.SpringBootTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@e4199a6, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@698c7c27, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@6e746639, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@4e4bfbdb, org.springframework.test.context.support.DirtiesContextTestExecutionListener@4cc5d71d, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@4622f7e6, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@b2a04b5, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@1aaea328, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@78b1f25f, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@29fdb768]
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.031 s - in sam_wen.cities_graph.CitiesConfigurationTest
+2019-02-23 11:04:32.178  INFO 55312 --- [       Thread-7] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-02-23 11:04:32.179  INFO 55312 --- [       Thread-9] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-02-23 11:04:32.180  INFO 55312 --- [       Thread-4] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
 [INFO] 
 [INFO] Results:
 [INFO] 
@@ -193,30 +193,30 @@ Loading source files for package sam_wen.cities_graph...
 Constructing Javadoc information...
 Standard Doclet version 1.8.0_131
 Building tree for all the packages and classes...
-Generating /Users/sam/Workspace/cities-graph/target/apidocs/sam_wen/cities_graph/AdjacencyListGraph.html...
-Generating /Users/sam/Workspace/cities-graph/target/apidocs/sam_wen/cities_graph/CitiesApplication.html...
-Generating /Users/sam/Workspace/cities-graph/target/apidocs/sam_wen/cities_graph/CitiesConfiguration.html...
-Generating /Users/sam/Workspace/cities-graph/target/apidocs/sam_wen/cities_graph/CitiesController.html...
-Generating /Users/sam/Workspace/cities-graph/target/apidocs/sam_wen/cities_graph/CitiesErrorHandler.html...
-Generating /Users/sam/Workspace/cities-graph/target/apidocs/sam_wen/cities_graph/package-frame.html...
-Generating /Users/sam/Workspace/cities-graph/target/apidocs/sam_wen/cities_graph/package-summary.html...
-Generating /Users/sam/Workspace/cities-graph/target/apidocs/sam_wen/cities_graph/package-tree.html...
-Generating /Users/sam/Workspace/cities-graph/target/apidocs/constant-values.html...
-Generating /Users/sam/Workspace/cities-graph/target/apidocs/sam_wen/cities_graph/class-use/CitiesErrorHandler.html...
-Generating /Users/sam/Workspace/cities-graph/target/apidocs/sam_wen/cities_graph/class-use/CitiesController.html...
-Generating /Users/sam/Workspace/cities-graph/target/apidocs/sam_wen/cities_graph/class-use/CitiesApplication.html...
-Generating /Users/sam/Workspace/cities-graph/target/apidocs/sam_wen/cities_graph/class-use/AdjacencyListGraph.html...
-Generating /Users/sam/Workspace/cities-graph/target/apidocs/sam_wen/cities_graph/class-use/CitiesConfiguration.html...
-Generating /Users/sam/Workspace/cities-graph/target/apidocs/sam_wen/cities_graph/package-use.html...
+Generating /Users/sam/Workspace/cities-graph/javadocs/sam_wen/cities_graph/AdjacencyListGraph.html...
+Generating /Users/sam/Workspace/cities-graph/javadocs/sam_wen/cities_graph/CitiesApplication.html...
+Generating /Users/sam/Workspace/cities-graph/javadocs/sam_wen/cities_graph/CitiesConfiguration.html...
+Generating /Users/sam/Workspace/cities-graph/javadocs/sam_wen/cities_graph/CitiesController.html...
+Generating /Users/sam/Workspace/cities-graph/javadocs/sam_wen/cities_graph/CitiesErrorHandler.html...
+Generating /Users/sam/Workspace/cities-graph/javadocs/sam_wen/cities_graph/package-frame.html...
+Generating /Users/sam/Workspace/cities-graph/javadocs/sam_wen/cities_graph/package-summary.html...
+Generating /Users/sam/Workspace/cities-graph/javadocs/sam_wen/cities_graph/package-tree.html...
+Generating /Users/sam/Workspace/cities-graph/javadocs/constant-values.html...
+Generating /Users/sam/Workspace/cities-graph/javadocs/sam_wen/cities_graph/class-use/CitiesErrorHandler.html...
+Generating /Users/sam/Workspace/cities-graph/javadocs/sam_wen/cities_graph/class-use/CitiesController.html...
+Generating /Users/sam/Workspace/cities-graph/javadocs/sam_wen/cities_graph/class-use/CitiesApplication.html...
+Generating /Users/sam/Workspace/cities-graph/javadocs/sam_wen/cities_graph/class-use/AdjacencyListGraph.html...
+Generating /Users/sam/Workspace/cities-graph/javadocs/sam_wen/cities_graph/class-use/CitiesConfiguration.html...
+Generating /Users/sam/Workspace/cities-graph/javadocs/sam_wen/cities_graph/package-use.html...
 Building index for all the packages and classes...
-Generating /Users/sam/Workspace/cities-graph/target/apidocs/overview-tree.html...
-Generating /Users/sam/Workspace/cities-graph/target/apidocs/index-all.html...
-Generating /Users/sam/Workspace/cities-graph/target/apidocs/deprecated-list.html...
+Generating /Users/sam/Workspace/cities-graph/javadocs/overview-tree.html...
+Generating /Users/sam/Workspace/cities-graph/javadocs/index-all.html...
+Generating /Users/sam/Workspace/cities-graph/javadocs/deprecated-list.html...
 Building index for all classes...
-Generating /Users/sam/Workspace/cities-graph/target/apidocs/allclasses-frame.html...
-Generating /Users/sam/Workspace/cities-graph/target/apidocs/allclasses-noframe.html...
-Generating /Users/sam/Workspace/cities-graph/target/apidocs/index.html...
-Generating /Users/sam/Workspace/cities-graph/target/apidocs/help-doc.html...
+Generating /Users/sam/Workspace/cities-graph/javadocs/allclasses-frame.html...
+Generating /Users/sam/Workspace/cities-graph/javadocs/allclasses-noframe.html...
+Generating /Users/sam/Workspace/cities-graph/javadocs/index.html...
+Generating /Users/sam/Workspace/cities-graph/javadocs/help-doc.html...
 [INFO] Building jar: /Users/sam/Workspace/cities-graph/target/cities-graph-0.0.1-SNAPSHOT-javadoc.jar
 [INFO] 
 [INFO] --- maven-install-plugin:2.5.2:install (default-install) @ cities-graph ---
@@ -227,6 +227,6 @@ Generating /Users/sam/Workspace/cities-graph/target/apidocs/help-doc.html...
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  17.055 s
-[INFO] Finished at: 2019-02-23T10:32:17-05:00
+[INFO] Total time:  17.969 s
+[INFO] Finished at: 2019-02-23T11:04:37-05:00
 [INFO] ------------------------------------------------------------------------
