@@ -70,7 +70,7 @@ This command will compile the code, run unit tests, and generate reports, java d
 - cities-graph-0.0.1-SNAPSHOT.jar
 - cities-graph-0.0.1-SNAPSHOT-javadoc.jar
 
-Your local maven repository will receive copies for the 4 snapshot files.
+Your local maven repository will receive copies of the 4 snapshot files.
 
 Check javadocs/index.html for java documents for the project.
 
@@ -92,7 +92,7 @@ How it works
 
 The program uses LinkedList to store adjacency cities of a city. A HashMap is used to store all cities and their adjacency cities. In the HashMap, a city name is a key and the value is the adjacency cities of the city.
 
-BFS (breadth first search) is used. The searching for destination city is started from origin city. It checks through all adjacency cities first. If an adjacency city does not match destination and not visited before, it saves the city in a queue. After all adjacency cities are visited, it pops out the first city in the queue and used it to start a next round. It will return immediately if a match is found. If the queue is empty, it means all possibilities are exhausted and destination cannot be reached.
+BFS (breadth first search) is used. The searching for destination city is started from the origin city. It checks through all adjacency cities first. If an adjacency city does not match the destination and not visited before, it saves the city in a queue. After all adjacency cities are visited, it pops out the first city in the queue and used it to start a next round. It will return immediately if a match is found. If the queue is empty, it means all possibilities are exhausted and the destination cannot be reached.
 
 Todo List
 ----------
