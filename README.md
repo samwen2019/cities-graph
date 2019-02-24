@@ -95,7 +95,7 @@ BFS (breadth first search) is used. The searching for destination city is starte
 Todo List
 ----------
 
-1. curl-test.txt can be convert to a test script
+1. curl-test.txt can be converted to a test script
 2. Dockerfile to deliver final release as docker image
 3. A script to automate release process
 4. The requirement, "Any unexpected input should result in a ’no’ response" is too strong. It breaks conventions. It is necessary to get into more details.

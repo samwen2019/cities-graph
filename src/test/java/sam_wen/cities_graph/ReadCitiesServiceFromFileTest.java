@@ -5,6 +5,11 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 import static org.junit.Assert.assertEquals;
 
+import static org.mockito.ArgumentMatchers.anyString;
+import static org.mockito.Mockito.mock;
+import org.mockito.BDDMockito;
+import org.mockito.Mockito;
+
 public class ReadCitiesServiceFromFileTest {
 
     @Test
@@ -44,6 +49,19 @@ public class ReadCitiesServiceFromFileTest {
 
         assertFalse(ReadCitiesServiceFromFile.read(graph, "./test/not-existed.txt"));
         assertFalse(ReadCitiesServiceFromFile.read(graph, "./test/empty.txt"));
+
+    }
+
+    @Test
+    public void read4() {
+
+        AdjacencyListGraph graph = mock(AdjacencyListGraph.class, Mockito.RETURNS_DEEP_STUBS);
+
+        assertNotNull(graph);
+
+        BDDMockito.when(graph.addConnection(anyString(),anyString())).thenReturn(false);
+
+        assertFalse(ReadCitiesServiceFromFile.read(graph, "test/city.txt"));
 
     }
 }

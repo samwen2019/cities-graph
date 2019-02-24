@@ -9,7 +9,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 /**
- * Implements CitiesService, Use HashMap and LinkedList to represent connected cities graph
+ * Implements CitiesService. It uses HashMap and LinkedList to represent connected cities graph
  */
 public class AdjacencyListGraph implements CitiesService {
 

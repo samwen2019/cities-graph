@@ -57,8 +57,11 @@ public class ReadCitiesServiceFromFile {
                     continue;
                 }
 
-                graph.addConnection(node1, node2);
-                okCount++;
+                if (graph.addConnection(node1, node2)) {
+                    okCount++;
+                } else {
+                    ok = false;
+                }
             }
 
             reader.close();
