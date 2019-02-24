@@ -52,7 +52,7 @@ Full 100% code coverage is achieved.
 
 Check unit-test-coverage-report/index.html for code coverage of the test.
 
-Here is a screen shots of the test coverage reports:
+Here is a screen shot of the test coverage reports:
 
 ![jacoco-1.png](https://github.com/samwen2019/cities-graph/raw/master/unit-test-coverage-report/jacoco-1.png)
 
