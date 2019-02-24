@@ -103,3 +103,4 @@ Todo List
 4. The requirement, "Any unexpected input should result in a ’no’ response" is too strong. It breaks conventions. It is necessary to get into more details.
 5. In a sense, the swagger api url breaks above requirement.
 6. After No. 4 answered, we can decide to turn on Spring Boot Actuator.
+7. Enable Spring Cloud supports to run the microservice in spring cloud environment. 
