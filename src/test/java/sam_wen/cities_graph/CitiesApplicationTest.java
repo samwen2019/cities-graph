@@ -9,7 +9,7 @@ public class CitiesApplicationTest {
     @Test
     public void main() {
 
-        String args[] = {};
+        String args[] = {"--datafile=test/city.txt"};
         CitiesApplication.main(args);
         assertNotNull(CitiesApplication.appCtx);
 
