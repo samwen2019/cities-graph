@@ -5,6 +5,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.io.*;
+import java.util.Scanner;
 
 /**
  * Read an AdjacencyListGraph instance from file
@@ -15,25 +16,23 @@ public class ReadCitiesServiceFromFile {
 
     /**
      * @param graph      a CitiesService instance
-     * @param filepath   absolution or relative path
+     * @param file       File object handle
      * @return boolean   true if no error;
      *                   false if there is any error, but it will read the rest
      */
-    public static boolean read(CitiesService graph, String filepath) {
+    public static boolean read(CitiesService graph, File file) {
 
         boolean ok = true;
+        Scanner scanner = null;
 
         try {
 
-            File file = new File(filepath);
-            InputStreamReader is = new InputStreamReader(new FileInputStream(file));
-            BufferedReader reader = new BufferedReader(is);
+            scanner = new Scanner(file);
             int n = 0, okCount = 0;
 
-            while (true) {
+            while (scanner.hasNextLine()) {
 
-                String line = reader.readLine();
-                if (line == null) break;
+                String line = scanner.nextLine();
                 n++;
 
                 String pairs[] = line.split(",");
@@ -64,21 +63,23 @@ public class ReadCitiesServiceFromFile {
                 }
             }
 
-            reader.close();
-            is.close();
-
             LOGGER.trace("read OK lines = " + okCount + "; read Error lines = " + (n - okCount));
 
             if (okCount == 0) {
                 ok = false;
-                LOGGER.error("failed to read any data from " + filepath);
-                return false;
+                LOGGER.error("failed to read any data from " + file.getAbsolutePath());
             }
 
         } catch (IOException e) {
+
             ok = false;
-            LOGGER.error(e.getMessage() + " filepath = " + filepath);
+            LOGGER.error(e.getMessage() + " filepath = " + file.getAbsolutePath());
             //e.printStackTrace();
+
+        }
+
+        if (scanner != null) {
+            scanner.close();
         }
 
         return ok;

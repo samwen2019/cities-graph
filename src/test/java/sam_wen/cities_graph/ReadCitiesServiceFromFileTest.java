@@ -10,6 +10,8 @@ import static org.mockito.Mockito.mock;
 import org.mockito.BDDMockito;
 import org.mockito.Mockito;
 
+import java.io.File;
+
 public class ReadCitiesServiceFromFileTest {
 
     @Test
@@ -22,7 +24,7 @@ public class ReadCitiesServiceFromFileTest {
 
         AdjacencyListGraph graph = new AdjacencyListGraph();
         assertEquals(0, graph.size());
-        assertTrue(ReadCitiesServiceFromFile.read(graph, "test/city.txt"));
+        assertTrue(ReadCitiesServiceFromFile.read(graph, new File("test/city.txt")));
         assertEquals(6, graph.size());
 
         assertEquals(true, graph.isConnected("Boston", "Newark"));
@@ -35,7 +37,7 @@ public class ReadCitiesServiceFromFileTest {
 
         AdjacencyListGraph graph = new AdjacencyListGraph();
         assertEquals(0, graph.size());
-        assertFalse(ReadCitiesServiceFromFile.read(graph, "./test/data.txt"));
+        assertFalse(ReadCitiesServiceFromFile.read(graph, new File("./test/data.txt")));
         assertEquals(6, graph.size());
 
         assertEquals(true, graph.isConnected("a", "e"));
@@ -47,8 +49,8 @@ public class ReadCitiesServiceFromFileTest {
 
         AdjacencyListGraph graph = new AdjacencyListGraph();
 
-        assertFalse(ReadCitiesServiceFromFile.read(graph, "./test/not-existed.txt"));
-        assertFalse(ReadCitiesServiceFromFile.read(graph, "./test/empty.txt"));
+        assertFalse(ReadCitiesServiceFromFile.read(graph, new File("not-existed.txt")));
+        assertFalse(ReadCitiesServiceFromFile.read(graph, new File("./test/empty.txt")));
 
     }
 
@@ -61,7 +63,7 @@ public class ReadCitiesServiceFromFileTest {
 
         BDDMockito.when(graph.addConnection(anyString(),anyString())).thenReturn(false);
 
-        assertFalse(ReadCitiesServiceFromFile.read(graph, "test/city.txt"));
+        assertFalse(ReadCitiesServiceFromFile.read(graph, new File("test/city.txt")));
 
     }
 }

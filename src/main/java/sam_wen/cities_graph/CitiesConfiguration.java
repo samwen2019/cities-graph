@@ -10,6 +10,8 @@ import springfox.documentation.spi.DocumentationType;
 import springfox.documentation.spring.web.plugins.Docket;
 import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
+import java.io.File;
+
 /**
  * Provides configurations
  */
@@ -23,7 +25,7 @@ public class CitiesConfiguration {
     @Bean
     CitiesService citiesService() {
         AdjacencyListGraph graph = new AdjacencyListGraph();
-        ReadCitiesServiceFromFile.read(graph, datafile);
+        ReadCitiesServiceFromFile.read(graph, new File(datafile));
         return graph;
     }
 
