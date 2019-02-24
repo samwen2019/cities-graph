@@ -17,7 +17,7 @@ public class CitiesController {
     private static final Logger LOGGER = LoggerFactory.getLogger(CitiesController.class);
 
     @Autowired
-    AdjacencyListGraph citiesGraph;
+    CitiesService citiesService;
 
     /**
      * @param response      current HttpServletResponse object
@@ -34,7 +34,7 @@ public class CitiesController {
             @RequestParam(name = "destination") String destination
     ) {
         try {
-            if (citiesGraph.isConnected(origin, destination)) {
+            if (citiesService.isConnected(origin, destination)) {
                 return "yes";
             } else {
                 return "no";

@@ -8,7 +8,6 @@ import javax.servlet.http.HttpServletResponse;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.web.client.HttpStatusCodeException;
 
 /**
  * Handle errors
@@ -25,7 +24,8 @@ public class CitiesErrorHandler implements ErrorController {
      *
      * TODO:
      *  1) not all exceptions are caused by unexpected input
-     *  2) response code need to be more specific
+     *  2) response code needs to be more specific
+     *  3) error message needs to be more specific
      *
      * @param response  current HttpServletResponse object
      * @return          "no"

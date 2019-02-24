@@ -17,7 +17,7 @@ import org.slf4j.LoggerFactory;
 <span class="fc" id="L17">    private static final Logger LOGGER = LoggerFactory.getLogger(CitiesController.class);</span>
 
     @Autowired
-    AdjacencyListGraph citiesGraph;
+    CitiesService citiesService;
 
     /**
      * @param response      current HttpServletResponse object
@@ -34,7 +34,7 @@ import org.slf4j.LoggerFactory;
             @RequestParam(name = &quot;destination&quot;) String destination
     ) {
         try {
-<span class="fc bfc" id="L37" title="All 2 branches covered.">            if (citiesGraph.isConnected(origin, destination)) {</span>
+<span class="fc bfc" id="L37" title="All 2 branches covered.">            if (citiesService.isConnected(origin, destination)) {</span>
 <span class="fc" id="L38">                return &quot;yes&quot;;</span>
             } else {
 <span class="fc" id="L40">                return &quot;no&quot;;</span>

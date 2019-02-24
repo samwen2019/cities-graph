@@ -12,7 +12,7 @@ import org.slf4j.LoggerFactory;
 /**
  * Use HashMap and LinkedList to represent connected cities graph
  */
-public class AdjacencyListGraph {
+public class AdjacencyListGraph implements CitiesService {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(AdjacencyListGraph.class);
 
@@ -79,6 +79,7 @@ public class AdjacencyListGraph {
      * @param destination   ending node
      * @return boolean      true if connected, false if not connected
      */
+    @Override
     public boolean isConnected(String origin, String destination) throws IllegalArgumentException {
 
         if (origin == null) {
@@ -238,7 +239,7 @@ public class AdjacencyListGraph {
 
             if (size() == 0) {
                 ok = false;
-                LOGGER.error("there is no city in the graph");
+                LOGGER.error("there is no node in the graph");
                 return false;
             }
 

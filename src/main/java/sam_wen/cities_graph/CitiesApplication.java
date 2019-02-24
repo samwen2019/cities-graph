@@ -10,6 +10,7 @@ import org.springframework.context.ApplicationContext;
 @SpringBootApplication
 public class CitiesApplication {
 
+    // used in tests
     public static ApplicationContext appCtx;
 
     public static void main(String[] args) {

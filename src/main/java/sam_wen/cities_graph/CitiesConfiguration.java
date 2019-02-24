@@ -25,7 +25,7 @@ public class CitiesConfiguration {
     private String datafile;
 
     @Bean
-    AdjacencyListGraph adjacencyListGraph() {
+    CitiesService citiesService() {
         return new AdjacencyListGraph(datafile);
     }
 
