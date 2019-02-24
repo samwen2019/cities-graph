@@ -20,45 +20,14 @@ public class AdjacencyListGraphTest {
 
         AdjacencyListGraph graph = new AdjacencyListGraph();
 
-        graph.addConnection("a", "b");
+        assertTrue(graph.addConnection("a", "b"));
         assertEquals(2, graph.size());
 
-        try {
-            graph.addConnection(null, "c");
-            assertFalse("failed to generate IllegalArgumentException", true);
-        } catch (IllegalArgumentException e){
-            assertEquals("origin is null", e.getMessage());
-        }
-        assertEquals(2, graph.size());
-
-        try {
-            graph.addConnection("", "c");
-            assertFalse("failed to generate IllegalArgumentException", true);
-        } catch (IllegalArgumentException e){
-            assertEquals("origin is empty", e.getMessage());
-        }
-
-        try {
-            graph.addConnection("d", null);
-            assertFalse("failed to generate IllegalArgumentException", true);
-        } catch (IllegalArgumentException e){
-            assertEquals("destination is null", e.getMessage());
-        }
-        assertEquals(2, graph.size());
-
-        try {
-            graph.addConnection("d", "");
-            assertFalse("failed to generate IllegalArgumentException", true);
-        } catch (IllegalArgumentException e){
-            assertEquals("destination is empty", e.getMessage());
-        }
-
-        try {
-            graph.addConnection("e", "e");
-            assertFalse("failed to generate IllegalArgumentException", true);
-        } catch (IllegalArgumentException e){
-            assertEquals("destination is the same as origin", e.getMessage());
-        }
+        assertFalse(graph.addConnection(null, "c"));
+        assertFalse(graph.addConnection("", "c"));
+        assertFalse(graph.addConnection("c", null));
+        assertFalse(graph.addConnection("c", ""));
+        assertFalse(graph.addConnection("e", "e"));
 
         assertEquals(2, graph.size());
     }
@@ -71,34 +40,10 @@ public class AdjacencyListGraphTest {
         graph.addConnection("a", "b");
         graph.addConnection("b", "c");
 
-        try {
-            graph.isConnected(null, "c");
-            assertFalse("failed to generate IllegalArgumentException", true);
-        } catch (IllegalArgumentException e){
-            assertEquals("origin is null", e.getMessage());
-        }
-        assertEquals(3, graph.size());
-
-        try {
-            graph.isConnected("", "c");
-            assertFalse("failed to generate IllegalArgumentException", true);
-        } catch (IllegalArgumentException e){
-            assertEquals("origin is empty", e.getMessage());
-        }
-
-        try {
-            graph.isConnected("d", null);
-            assertFalse("failed to generate IllegalArgumentException", true);
-        } catch (IllegalArgumentException e){
-            assertEquals("destination is null", e.getMessage());
-        }
-
-        try {
-            graph.isConnected("d", "");
-            assertFalse("failed to generate IllegalArgumentException", true);
-        } catch (IllegalArgumentException e){
-            assertEquals("destination is empty", e.getMessage());
-        }
+        assertFalse(graph.isConnected(null, "c"));
+        assertFalse(graph.isConnected("", "c"));
+        assertFalse(graph.isConnected("d", null));
+        assertFalse(graph.isConnected("d", ""));
 
         assertEquals(3, graph.size());
     }
@@ -130,28 +75,5 @@ public class AdjacencyListGraphTest {
         graph.addConnection("b", "c");
 
         assertEquals(3, graph.size());
-    }
-
-    @Test
-    public void constructFromFile1() {
-
-        AdjacencyListGraph graph = new AdjacencyListGraph("./test/data.txt");
-
-        assertEquals(6, graph.size());
-        assertEquals(true, graph.isConnected("a", "e"));
-        assertEquals(false, graph.isConnected("a", "c"));
-
-    }
-
-    @Test
-    public void constructFromFile2() {
-
-        AdjacencyListGraph graph = new AdjacencyListGraph("./test/not-existed.txt");
-        assertEquals(0, graph.size());
-
-        assertFalse(graph.readCitiesGraphFromFile("./test/not-existed2.txt"));
-
-        assertFalse(graph.readCitiesGraphFromFile("./test/empty.txt"));
-
     }
 }

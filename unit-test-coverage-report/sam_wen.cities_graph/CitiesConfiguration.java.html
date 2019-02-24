@@ -6,10 +6,6 @@ import org.springframework.context.annotation.Configuration;
 
 import springfox.documentation.builders.PathSelectors;
 import springfox.documentation.builders.RequestHandlerSelectors;
-import springfox.documentation.builders.ResponseMessageBuilder;
-import springfox.documentation.schema.ModelRef;
-import springfox.documentation.service.ApiInfo;
-import springfox.documentation.service.Contact;
 import springfox.documentation.spi.DocumentationType;
 import springfox.documentation.spring.web.plugins.Docket;
 import springfox.documentation.swagger2.annotations.EnableSwagger2;
@@ -19,23 +15,25 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
  */
 @Configuration
 @EnableSwagger2
-<span class="fc" id="L22">public class CitiesConfiguration {</span>
+<span class="fc" id="L18">public class CitiesConfiguration {</span>
 
     @Value(&quot;${datafile}&quot;)
     private String datafile;
 
     @Bean
     CitiesService citiesService() {
-<span class="fc" id="L29">        return new AdjacencyListGraph(datafile);</span>
+<span class="fc" id="L25">        AdjacencyListGraph graph = new AdjacencyListGraph();</span>
+<span class="fc" id="L26">        ReadCitiesServiceFromFile.read(graph, datafile);</span>
+<span class="fc" id="L27">        return graph;</span>
     }
 
     @Bean
     public Docket api() {
-<span class="fc" id="L34">        return new Docket(DocumentationType.SWAGGER_2)</span>
-<span class="fc" id="L35">                .select()</span>
-<span class="fc" id="L36">                .apis(RequestHandlerSelectors.any())</span>
-<span class="fc" id="L37">                .paths(PathSelectors.ant(&quot;/connected**&quot;))</span>
-<span class="fc" id="L38">                .build();</span>
+<span class="fc" id="L32">        return new Docket(DocumentationType.SWAGGER_2)</span>
+<span class="fc" id="L33">                .select()</span>
+<span class="fc" id="L34">                .apis(RequestHandlerSelectors.any())</span>
+<span class="fc" id="L35">                .paths(PathSelectors.ant(&quot;/connected**&quot;))</span>
+<span class="fc" id="L36">                .build();</span>
     }
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.7.201606060606</span></div></body></html>

@@ -1,6 +1,5 @@
 package sam_wen.cities_graph;
 
-import java.io.*;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.LinkedList;
@@ -10,7 +9,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 /**
- * Use HashMap and LinkedList to represent connected cities graph
+ * Implements CitiesService, Use HashMap and LinkedList to represent connected cities graph
  */
 public class AdjacencyListGraph implements CitiesService {
 
@@ -25,51 +24,47 @@ public class AdjacencyListGraph implements CitiesService {
         adjacencyListMap = new HashMap<>();
     }
 
-
-    /**
-     * Constructor from a file
-     *
-     * @param filepath   absolution or relative path
-     */
-    public AdjacencyListGraph(String filepath) {
-        this();
-        readCitiesGraphFromFile(filepath);
-    }
-
     /**
      * Add connection (bi-direction) between two nodes
      *
      * @param origin        starting node
      * @param destination   ending node
-     * @throws IllegalArgumentException invalid argument
+     * @return boolean      true if success, false if failed
      */
-    public void addConnection(String origin, String destination) throws IllegalArgumentException {
+    @Override
+    public boolean addConnection(String origin, String destination) {
 
         if (origin == null) {
-            throw new IllegalArgumentException("origin is null");
+            LOGGER.error("origin is null");
+            return false;
         }
 
         origin = origin.trim();
         if (origin.length() == 0) {
-            throw new IllegalArgumentException("origin is empty");
+            LOGGER.error("origin is empty");
+            return false;
         }
 
         if (destination == null) {
-            throw new IllegalArgumentException("destination is null");
+            LOGGER.error("destination is null");
+            return false;
         }
 
         destination = destination.trim();
         if (destination.length() == 0) {
-            throw new IllegalArgumentException("destination is empty");
+            LOGGER.error("destination is empty");
+            return false;
         }
 
         if (destination.equals(origin)) {
-            throw new IllegalArgumentException("destination is the same as origin");
+            LOGGER.error("destination is the same as origin");
+            return false;
         }
 
         addOriginToDestination(origin, destination);
         addOriginToDestination(destination, origin);
 
+        return true;
     }
 
     /**
@@ -80,24 +75,28 @@ public class AdjacencyListGraph implements CitiesService {
      * @return boolean      true if connected, false if not connected
      */
     @Override
-    public boolean isConnected(String origin, String destination) throws IllegalArgumentException {
+    public boolean isConnected(String origin, String destination) {
 
         if (origin == null) {
-            throw new IllegalArgumentException("origin is null");
+            LOGGER.error("origin is null");
+            return false;
         }
 
         origin = origin.trim();
         if (origin.length() == 0) {
-            throw new IllegalArgumentException("origin is empty");
+            LOGGER.error("origin is empty");
+            return false;
         }
 
         if (destination == null) {
-            throw new IllegalArgumentException("destination is null");
+            LOGGER.error("destination is null");
+            return false;
         }
 
         destination = destination.trim();
         if (destination.length() == 0) {
-            throw new IllegalArgumentException("destination is empty");
+            LOGGER.error("destination is empty");
+            return false;
         }
 
         if (destination.equals(origin)) {
@@ -152,6 +151,15 @@ public class AdjacencyListGraph implements CitiesService {
     }
 
     /**
+     * get size
+     * @return int - size of nodes
+     */
+    public int size() {
+        return adjacencyListMap.size();
+    }
+
+
+    /**
      * Add single direction link from origin to destination in the graph
      *
      * @param origin        starting node
@@ -176,80 +184,6 @@ public class AdjacencyListGraph implements CitiesService {
         }
 
         adjacencyList.add(destination);
-    }
-
-    /**
-     * get size
-     * @return int - size of nodes
-     */
-    public int size() {
-        return adjacencyListMap.size();
-    }
-
-    /**
-     * @param filepath   absolution or relative path
-     * @return boolean   true if no error;
-     *                   false if there is any error, but it will read the rest 
-     */
-    public boolean readCitiesGraphFromFile(String filepath) {
-
-        boolean ok = true;
-
-        try {
-
-            File file = new File(filepath);
-            InputStreamReader is = new InputStreamReader(new FileInputStream(file));
-            BufferedReader reader = new BufferedReader(is);
-            int n = 0;
-
-            while (true) {
-
-                String line = reader.readLine();
-                if (line == null) break;
-                n++;
-
-                String pairs[] = line.split(",");
-                if (pairs.length != 2) {
-                    ok = false;
-                    LOGGER.error("line " + n + ": format invalid - " + line);
-                    continue;
-                }
-
-                String node1 = pairs[0].trim();
-                if (node1.length() == 0) {
-                    ok = false;
-                    LOGGER.error("line " + n + ": format invalid, the first string is empty - " + line);
-                    continue;
-                }
-
-                String node2 = pairs[1].trim();
-                if (node2.length() == 0) {
-                    ok = false;
-                    LOGGER.error("line " + n + ": format invalid, the second string is empty - " + line);
-                    continue;
-                }
-
-                addConnection(node1, node2);
-            }
-
-            reader.close();
-            is.close();
-
-            LOGGER.trace("graph size = " + size());
-
-            if (size() == 0) {
-                ok = false;
-                LOGGER.error("there is no node in the graph");
-                return false;
-            }
-
-        } catch (IOException e) {
-            ok = false;
-            LOGGER.error(e.getMessage() + " filepath = " + filepath);
-            //e.printStackTrace();
-        }
-
-        return ok;
     }
 
 }

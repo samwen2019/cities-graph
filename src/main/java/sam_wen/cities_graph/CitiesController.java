@@ -20,7 +20,6 @@ public class CitiesController {
     CitiesService citiesService;
 
     /**
-     * @param response      current HttpServletResponse object
      * @param origin        origin city
      * @param destination   destination
      * @return 
@@ -29,23 +28,12 @@ public class CitiesController {
      */
     @RequestMapping(value = "/connected", method = RequestMethod.GET)
     public String isConnected(
-            HttpServletResponse response,
             @RequestParam(name = "origin") String origin,
             @RequestParam(name = "destination") String destination
     ) {
-        try {
-            if (citiesService.isConnected(origin, destination)) {
-                return "yes";
-            } else {
-                return "no";
-            }
-        } catch (Exception e) {
-
-            response.setStatus(400);
-            LOGGER.error(e.getMessage());
-
-            //per requirement: "Any unexpected input should result in a ’no’ response"
-            //
+        if (citiesService.isConnected(origin, destination)) {
+            return "yes";
+        } else {
             return "no";
         }
     }

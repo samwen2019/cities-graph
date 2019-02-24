@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>ReadCitiesServiceFromFile.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">cities-graph</a> &gt; <a href="index.source.html" class="el_package">sam_wen.cities_graph</a> &gt; <span class="el_source">ReadCitiesServiceFromFile.java</span></div><h1>ReadCitiesServiceFromFile.java</h1><pre class="source lang-java linenums">package sam_wen.cities_graph;
+
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import java.io.*;
+
+/**
+ * Read an AdjacencyListGraph instance from file
+ */
+<span class="fc" id="L12">public class ReadCitiesServiceFromFile {</span>
+
+<span class="fc" id="L14">    private static final Logger LOGGER = LoggerFactory.getLogger(ReadCitiesServiceFromFile.class);</span>
+
+    /**
+     * @param graph      a CitiesService instance
+     * @param filepath   absolution or relative path
+     * @return boolean   true if no error;
+     *                   false if there is any error, but it will read the rest
+     */
+    public static boolean read(CitiesService graph, String filepath) {
+
+<span class="fc" id="L24">        boolean ok = true;</span>
+
+        try {
+
+<span class="fc" id="L28">            File file = new File(filepath);</span>
+<span class="fc" id="L29">            InputStreamReader is = new InputStreamReader(new FileInputStream(file));</span>
+<span class="fc" id="L30">            BufferedReader reader = new BufferedReader(is);</span>
+<span class="fc" id="L31">            int n = 0, okCount = 0;</span>
+
+            while (true) {
+
+<span class="fc" id="L35">                String line = reader.readLine();</span>
+<span class="fc bfc" id="L36" title="All 2 branches covered.">                if (line == null) break;</span>
+<span class="fc" id="L37">                n++;</span>
+
+<span class="fc" id="L39">                String pairs[] = line.split(&quot;,&quot;);</span>
+<span class="fc bfc" id="L40" title="All 2 branches covered.">                if (pairs.length != 2) {</span>
+<span class="fc" id="L41">                    ok = false;</span>
+<span class="fc" id="L42">                    LOGGER.error(&quot;line &quot; + n + &quot;: format invalid - &quot; + line);</span>
+<span class="fc" id="L43">                    continue;</span>
+                }
+
+<span class="fc" id="L46">                String node1 = pairs[0].trim();</span>
+<span class="fc bfc" id="L47" title="All 2 branches covered.">                if (node1.length() == 0) {</span>
+<span class="fc" id="L48">                    ok = false;</span>
+<span class="fc" id="L49">                    LOGGER.error(&quot;line &quot; + n + &quot;: format invalid, the first string is empty - &quot; + line);</span>
+<span class="fc" id="L50">                    continue;</span>
+                }
+
+<span class="fc" id="L53">                String node2 = pairs[1].trim();</span>
+<span class="fc bfc" id="L54" title="All 2 branches covered.">                if (node2.length() == 0) {</span>
+<span class="fc" id="L55">                    ok = false;</span>
+<span class="fc" id="L56">                    LOGGER.error(&quot;line &quot; + n + &quot;: format invalid, the second string is empty - &quot; + line);</span>
+<span class="fc" id="L57">                    continue;</span>
+                }
+
+<span class="fc" id="L60">                graph.addConnection(node1, node2);</span>
+<span class="fc" id="L61">                okCount++;</span>
+<span class="fc" id="L62">            }</span>
+
+<span class="fc" id="L64">            reader.close();</span>
+<span class="fc" id="L65">            is.close();</span>
+
+<span class="fc" id="L67">            LOGGER.trace(&quot;read OK lines = &quot; + okCount + &quot;; read Error lines = &quot; + (n - okCount));</span>
+
+<span class="fc bfc" id="L69" title="All 2 branches covered.">            if (okCount == 0) {</span>
+<span class="fc" id="L70">                ok = false;</span>
+<span class="fc" id="L71">                LOGGER.error(&quot;failed to read any data from &quot; + filepath);</span>
+<span class="fc" id="L72">                return false;</span>
+            }
+
+<span class="fc" id="L75">        } catch (IOException e) {</span>
+<span class="fc" id="L76">            ok = false;</span>
+<span class="fc" id="L77">            LOGGER.error(e.getMessage() + &quot; filepath = &quot; + filepath);</span>
+            //e.printStackTrace();
+<span class="fc" id="L79">        }</span>
+
+<span class="fc" id="L81">        return ok;</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.7.201606060606</span></div></body></html>

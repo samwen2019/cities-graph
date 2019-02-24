@@ -32,50 +32,43 @@ public class CitiesControllerTest {
 
     @Test
     public void isConnected1() {
-        HttpServletResponse response = mock(HttpServletResponse.class);
-        String result = controller.isConnected(response, "a", "b");
+        String result = controller.isConnected("a", "b");
         assertEquals("no", result);
     }
 
     @Test
     public void isConnected2() {
-        HttpServletResponse response = mock(HttpServletResponse.class);
-        String result = controller.isConnected(response, "", "b");
+        String result = controller.isConnected("", "b");
         assertEquals("no", result);
     }
 
     @Test
     public void isConnected3() {
-        HttpServletResponse response = mock(HttpServletResponse.class);
-        String result = controller.isConnected(response, "", "");
+        String result = controller.isConnected("", "");
         assertEquals("no", result);
     }
 
     @Test
     public void isConnected4() {
-        HttpServletResponse response = mock(HttpServletResponse.class);
-        String result = controller.isConnected(response, null, null);
+        String result = controller.isConnected(null, null);
         assertEquals("no", result);
     }
 
     @Test
     public void isConnected5() {
-        HttpServletResponse response = mock(HttpServletResponse.class);
-        String result = controller.isConnected(response, "Boston", "Newark");
+        String result = controller.isConnected("Boston", "Newark");
         assertEquals("yes", result);
     }
 
     @Test
     public void isConnected6() {
-        HttpServletResponse response = mock(HttpServletResponse.class);
-        String result = controller.isConnected(response, "Boston", "Philadelphia");
+        String result = controller.isConnected("Boston", "Philadelphia");
         assertEquals("yes", result);
     }
 
     @Test
     public void isConnected7() {
-        HttpServletResponse response = mock(HttpServletResponse.class);
-        String result = controller.isConnected(response, "Philadelphia", "Albany");
+        String result = controller.isConnected("Philadelphia", "Albany");
         assertEquals("no", result);
     }
 }
